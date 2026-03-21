@@ -270,7 +270,7 @@ body { font-family: var(--f-body); color: var(--c-gray-800); background: var(--c
 
 /* ── ABOUT ── */
 .about-wrap { background: var(--c-white); border-top: 1px solid var(--c-gray-100); }
-.about-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; margin-top: 8px; align-items: start; }
+.about-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; margin-top: 8px; align-items: stretch; }
 .about-text { font-size: 0.95rem; color: var(--c-gray-600); line-height: 1.8; font-weight: 300; margin-bottom: 16px; }
 .about-highlights { display: flex; flex-direction: column; gap: 16px; }
 .about-highlight { display: flex; align-items: center; gap: 16px; padding: 20px 24px; border-radius: var(--radius); background: var(--c-cream); border: 1px solid var(--c-gray-100); transition: all 0.3s; }
@@ -281,7 +281,7 @@ body { font-family: var(--f-body); color: var(--c-gray-800); background: var(--c
 
 /* ── VISION / MISSION ── */
 .vm-section { background: var(--c-cream); }
-.vm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 48px; }
+.vm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 40px; align-items: stretch; }
 .vm-card { padding: 44px; border-radius: var(--radius-xl); position: relative; overflow: hidden; }
 .vm-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
 .vm-card h3 { font-family: var(--f-display); font-size: 1.4rem; color: var(--c-forest); margin-bottom: 16px; font-weight: 600; }
@@ -297,7 +297,7 @@ body { font-family: var(--f-body); color: var(--c-gray-800); background: var(--c
 /* ── WHY MICROGREENS ── */
 .mg-wrap { background: var(--c-white); border-top: 1px solid var(--c-gray-100); position: relative; }
 .mg-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(180deg, var(--c-pale) 0%, var(--c-white) 40%); pointer-events: none; }
-.mg-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 56px; position: relative; }
+.mg-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 56px; position: relative; align-items: stretch; }
 .mg-card { background: var(--c-white); border-radius: var(--radius-xl); padding: 44px 36px; border: 1px solid var(--c-gray-100); transition: all 0.4s cubic-bezier(.16,1,.3,1); position: relative; overflow: hidden; }
 .mg-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; transition: height 0.4s; }
 .mg-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-8px); border-color: transparent; }
@@ -315,7 +315,7 @@ body { font-family: var(--f-body); color: var(--c-gray-800); background: var(--c
 .tb-wrap .sec-tag { color: var(--c-gold-light); }
 .tb-wrap .sec-h { color: var(--c-white); }
 .tb-wrap .sec-p { color: rgba(255,255,255,0.4); }
-.tb-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
+.tb-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; align-items: stretch; }
 .tb-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: var(--radius-xl); padding: 44px 32px; transition: all 0.4s cubic-bezier(.16,1,.3,1); position: relative; overflow: hidden; }
 .tb-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--c-gold), var(--c-gold-light)); opacity: 0; transition: opacity 0.4s; }
 .tb-card:hover { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.1); transform: translateY(-6px); }
@@ -326,7 +326,7 @@ body { font-family: var(--f-body); color: var(--c-gray-800); background: var(--c
 
 /* ── RESEARCH ── */
 .research-wrap { background: var(--c-white); border-top: 1px solid var(--c-gray-100); }
-.research-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 56px; }
+.research-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 56px; align-items: start; }
 .research-areas { list-style: none; display: flex; flex-direction: column; gap: 16px; margin-top: 20px; }
 .research-areas li { display: flex; align-items: flex-start; gap: 14px; font-size: 0.92rem; color: var(--c-gray-600); line-height: 1.6; padding: 16px 20px; border-radius: var(--radius); background: var(--c-cream); border: 1px solid var(--c-gray-100); transition: all 0.3s; }
 .research-areas li:hover { transform: translateX(6px); box-shadow: var(--shadow-sm); }
@@ -341,7 +341,7 @@ body { font-family: var(--f-body); color: var(--c-gray-800); background: var(--c
 
 /* ── ACADEMIC ── */
 .acad-wrap { background: var(--c-cream); }
-.acad-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 56px; }
+.acad-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 56px; align-items: stretch; }
 .acad-card { background: var(--c-white); border-radius: var(--radius-xl); padding: 44px 36px; border: 1px solid var(--c-gray-100); transition: all 0.4s cubic-bezier(.16,1,.3,1); position: relative; overflow: hidden; }
 .acad-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; transition: height 0.5s cubic-bezier(.16,1,.3,1); }
 .acad-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-6px); border-color: transparent; }
@@ -381,7 +381,7 @@ body { font-family: var(--f-body); color: var(--c-gray-800); background: var(--c
 .ws-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--c-gray-200); border: none; cursor: pointer; transition: all 0.3s; padding: 0; }
 .ws-dot.active { background: var(--c-forest); width: 24px; border-radius: 4px; }
 
-.ws-types { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 64px; }
+.ws-types { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 64px; align-items: stretch; }
 .ws-type-card { background: var(--c-white); border-radius: var(--radius-xl); padding: 44px 36px; border: 1px solid var(--c-gray-100); transition: all 0.35s; position: relative; overflow: hidden; }
 .ws-type-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--c-green), var(--c-gold)); }
 .ws-type-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-6px); }
@@ -424,6 +424,7 @@ body { font-family: var(--f-body); color: var(--c-gray-800); background: var(--c
 .contact-wrap::before { content: ''; position: absolute; inset: 0; opacity: 0.025; background-image: radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px); background-size: 24px 24px; }
 .contact-sec { padding: 110px 40px; max-width: 1320px; margin: 0 auto; position: relative; z-index: 2; }
 .contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 80px; align-items: start; }
+.contact-left { display: flex; flex-direction: column; }
 .contact-left .sec-tag { color: var(--c-gold-light); }
 .contact-left .sec-tag::before { background: var(--c-gold-light); }
 .contact-left .sec-h { color: var(--c-white); }
@@ -486,6 +487,41 @@ body { font-family: var(--f-body); color: var(--c-gray-800); background: var(--c
 .mob-overlay a { font-family: var(--f-display); font-size: 1.3rem; color: var(--c-forest); text-decoration: none; font-weight: 600; }
 .mob-overlay a:hover { color: var(--c-green); }
 .mob-x { position: absolute; top: 22px; right: 32px; background: none; border: none; cursor: pointer; color: var(--c-forest); }
+
+/* ── GRID ALIGNMENT FIX ── */
+/* Reveal wrapper divs inside grids must stretch to fill grid cells */
+.vm-grid > div,
+.mg-cards > div,
+.tb-cards > div,
+.acad-cards > div,
+.ws-types > div,
+.collab-cards > div,
+.srv-grid > div,
+.research-grid > div,
+.about-grid > div,
+.contact-grid > div { height: 100%; }
+
+/* Cards inside grids must fill their Reveal wrapper */
+.vm-card,
+.mg-card,
+.tb-card,
+.acad-card,
+.ws-type-card,
+.collab-card,
+.srv-item,
+.lab-card,
+.contact-form-card { height: 100%; display: flex; flex-direction: column; }
+
+/* Let card content fill remaining space */
+.vm-card p,
+.ws-type-card p { flex: 1; }
+.mission-list,
+.acad-card-list,
+.ws-type-list,
+.lab-goals { flex: 1; }
+
+/* About grid: highlights fill height */
+.about-highlights { height: 100%; justify-content: center; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1100px) {
@@ -635,7 +671,9 @@ body { font-family: var(--f-body); color: var(--c-gray-800); background: var(--c
 
       {/* ── VISION & MISSION ── */}
       <div className="vm-section">
-        <div className="sec" style={{ paddingTop: 80 }}>
+        <div className="sec">
+          <Reveal><div className="sec-tag">Vision & Mission</div></Reveal>
+          <Reveal delay={0.06}><h2 className="sec-h">What Drives Us Forward</h2></Reveal>
           <div className="vm-grid">
             <Reveal>
               <div className="vm-card vm-vision">
