@@ -72,25 +72,39 @@ const Icon = {
   Clock: () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>,
 }
 
-/* ── Workshop + Sampling Images ── */
+/* ── Workshop Images ── */
 const workshopImages = [
-  { src: '/workshop-images/workshop-3.jpeg', caption: 'Our facilitator conducts an interactive session on microgreens as sustainable superfoods at Prasan Vidya Mandir, Mamandur' },
-  { src: '/workshop-images/workshop-4.jpeg', caption: 'Students seated in groups across the school hall, recording growth observations and completing their cultivation worksheets with cocopeat trays beside them' },
-  { src: '/workshop-images/workshop-5.jpeg', caption: 'Overhead view of students with their individual cocopeat growing kits and seed vials, documenting their planting process step by step' },
-  { src: '/workshop-images/workshop-6.jpeg', caption: 'Students raise their hands enthusiastically during the Q&A session of the Microgreens Program' },
+  { src: '/workshop-images/workshop-students-session.jpeg', caption: 'Our facilitator conducts an interactive session on microgreens as sustainable superfoods at Prasan Vidya Mandir, Mamandur' },
+  { src: '/workshop-images/workshop-hands-on.jpeg', caption: 'Students seated in groups across the school hall, recording growth observations and completing their cultivation worksheets with cocopeat trays beside them' },
+  { src: '/workshop-images/workshop-instructor-teaching.jpeg', caption: 'Overhead view of students with their individual cocopeat growing kits and seed vials, documenting their planting process step by step' },
+  { src: '/workshop-images/workshop-qa-session.jpeg', caption: 'Students raise their hands enthusiastically during the Q&A session of the Microgreens Program' },
+  { src: '/sampling/child-coco-pots-explorer.jpeg', caption: 'Young learner exploring multiple microgreens varieties growing in coconut coir pots — hands-on learning from an early age' },
 ]
 
+/* ── Gallery Images (curated microgreens varieties & farm setup) ── */
 const samplingImages = [
-  { src: '/sampling/Picture1.png', caption: '' },
-  { src: '/sampling/Picture2.png', caption: '' },
-  { src: '/sampling/Picture3.jpg', caption: '' },
-  { src: '/sampling/Picture4.jpg', caption: '' },
-  { src: '/sampling/Picture5.jpg', caption: '' },
-  { src: '/sampling/Picture6.jpg', caption: '' },
-  { src: '/sampling/Picture7.jpg', caption: '' },
-  { src: '/sampling/Picture8.jpg', caption: '' },
-  { src: '/sampling/Picture9.jpg', caption: '' },
-  { src: '/sampling/Picture10.jpg', caption: '' },
+  { src: '/sampling/varieties-coco-pots-collection.jpeg' },
+  { src: '/sampling/grow-trays-led-lights.jpeg' },
+  { src: '/sampling/grow-kit-shelf-led.jpeg' },
+  { src: '/sampling/amaranth-red-macro.png' },
+  { src: '/sampling/varieties-rainbow-overhead.png' },
+  { src: '/sampling/radish-coco-pot-lush.jpeg' },
+  { src: '/sampling/garden-lush-green-leaves.jpeg' },
+  { src: '/sampling/sunflower-cotyledon-tray.jpeg' },
+  { src: '/sampling/amaranth-pink-bunch-white.jpeg' },
+  { src: '/sampling/amaranth-crimson-dense.jpg' },
+]
+
+/* ── Community Program Photos ── */
+const communityImages = [
+  { src: '/sampling/community-home-grower-growing.jpeg', name: 'Priya', note: 'Growing my own food at home!' },
+  { src: '/sampling/community-kids-seed-harvest.jpeg', name: 'Community Kids', note: 'Learning to grow, seed to harvest' },
+  { src: '/sampling/community-home-program-healthy.jpeg', name: 'Home Program', note: 'Healthy eating with microgreens' },
+  { src: '/sampling/community-child-first-harvest.jpeg', name: 'Arjun', note: 'My first microgreens harvest!' },
+  { src: '/sampling/community-home-grower-setup.jpeg', name: 'Divya', note: 'Learning nutrition through food' },
+  { src: '/sampling/community-cooking-session.jpeg', name: 'Group Session', note: 'Cooking together with microgreens' },
+  { src: '/sampling/community-child-watering.jpeg', name: 'Ananya', note: 'Watering my microgreens tray' },
+  { src: '/sampling/community-girl-harvest-day.jpeg', name: 'Kavya', note: 'Harvesting day — seed to plate!' },
 ]
 
 /* ── Navigation ── */
@@ -101,6 +115,7 @@ const navItems = [
   ['research', 'Research & Innovation'],
   ['academics', 'Academic Programs'],
   ['workshop', 'Workshops & Training'],
+  ['community', 'Community'],
   ['gallery', 'Gallery'],
   ['services', 'Services'],
   ['collaborations', 'Collaborations'],
@@ -155,6 +170,18 @@ export default function App() {
 
   const allImages = workshopImages
   const navSolid = scrollY > 60
+
+  /* ── Watermark helper ── */
+  const Watermark = ({ src, position = 'right', opacity = 0.07, bgPos, bgSize, rotate, wmStyle }) => (
+    <div className="wm" style={{
+      backgroundImage: `url('${src}')`,
+      backgroundPosition: bgPos || (position === 'right' ? 'center right' : position === 'center' ? 'center center' : 'center left'),
+      backgroundSize: bgSize || 'contain',
+      opacity,
+      transform: rotate ? `rotate(${rotate}) scale(1.4)` : undefined,
+      ...wmStyle,
+    }} />
+  )
 
   return (
     <>
@@ -222,7 +249,8 @@ export default function App() {
           <Reveal delay={0.2}>
             <div className="hero-right">
               <div className="hero-card">
-                <div className="hero-metrics">
+                <div style={{ position:'absolute', inset:0, backgroundImage:"url('/sampling/varieties-rainbow-overhead.png')", backgroundSize:'cover', backgroundPosition:'center', opacity:0.09, pointerEvents:'none', zIndex:0 }} />
+                <div className="hero-metrics" style={{ position:'relative', zIndex:1 }}>
                   <div className="hero-metric">
                     <div className="hero-metric-num">7–14</div>
                     <div className="hero-metric-label">Days Harvest Cycle</div>
@@ -266,8 +294,9 @@ export default function App() {
       </div>
 
       {/* ══════════ ABOUT ══════════ */}
-      <div className="about-wrap" id="about">
-        <div className="sec">
+      <div className="about-wrap" id="about" style={{ position: 'relative', overflow: 'hidden' }}>
+        <Watermark src="/sampling/radish-red-stems-close.jpg" position="center" opacity={0.08} bgSize="cover" bgPos="center center" />
+        <div className="sec" style={{ position: 'relative', zIndex: 1 }}>
           <Reveal><div className="sec-tag">Who We Are</div></Reveal>
           <Reveal delay={0.06}><h2 className="sec-h">Built on Science,<br />Driven by Purpose</h2></Reveal>
           <div className="about-grid">
@@ -347,16 +376,25 @@ export default function App() {
 
       {/* ══════════ WHY MICROGREENS ══════════ */}
       <div className="mg-wrap" id="microgreens">
-        <div className="sec" style={{ position: 'relative' }}>
-          <Reveal><div className="sec-tag">Why Microgreens</div></Reveal>
-          <Reveal delay={0.06}><h2 className="sec-h">Small Plants<br />Big Nutrition</h2></Reveal>
-          <Reveal delay={0.12}>
-            <p className="sec-p">
-              Microgreens are young edible plants harvested within 7 to 14 days of growth. They are
-              known for their high nutrient density and fast growth cycle, making them one of the most
-              promising options for sustainable food production in both urban and rural settings.
-            </p>
-          </Reveal>
+        <div className="sec">
+          <div className="mg-intro-grid">
+            <div className="mg-intro-left">
+              <Reveal><div className="sec-tag">Why Microgreens</div></Reveal>
+              <Reveal delay={0.06}><h2 className="sec-h">Small Plants<br />Big Nutrition</h2></Reveal>
+              <Reveal delay={0.12}>
+                <p className="sec-p" style={{ marginBottom: 0 }}>
+                  Microgreens are young edible plants harvested within 7 to 14 days of growth. They are
+                  known for their high nutrient density and fast growth cycle, making them one of the most
+                  promising options for sustainable food production in both urban and rural settings.
+                </p>
+              </Reveal>
+            </div>
+            <Reveal delay={0.15} style={{ display: 'flex', alignItems: 'center' }}>
+              <div className="mg-intro-img">
+                <img src="/sampling/amaranth-pink-bunch-white.jpeg" alt="Fresh microgreens" />
+              </div>
+            </Reveal>
+          </div>
           <div className="mg-cards">
             {[
               { icon: <Icon.Sprout />, title: 'Nutrient Dense', desc: 'Microgreens shall contain concentrated vitamins, minerals, and antioxidants — packed into every small bite.', bg: '#e6f5ea', color: '#0a6b3a' },
@@ -405,8 +443,9 @@ export default function App() {
       </div>
 
       {/* ══════════ RESEARCH ══════════ */}
-      <div className="research-wrap" id="research">
-        <div className="sec">
+      <div className="research-wrap" id="research" style={{ position: 'relative', overflow: 'hidden' }}>
+        <Watermark src="/sampling/sunflower-sprouts-white-bg.jpg" position="left" opacity={0.07} bgSize="45% auto" bgPos="left center" />
+        <div className="sec" style={{ position: 'relative', zIndex: 1 }}>
           <Reveal><div className="sec-tag">Research &amp; Innovation</div></Reveal>
           <Reveal delay={0.06}><h2 className="sec-h">Climate-Resilient<br />Agriculture Research</h2></Reveal>
           <Reveal delay={0.12}>
@@ -453,8 +492,9 @@ export default function App() {
       </div>
 
       {/* ══════════ ACADEMIC PROGRAMS ══════════ */}
-      <div className="acad-wrap" id="academics">
-        <div className="sec">
+      <div className="acad-wrap" id="academics" style={{ position: 'relative', overflow: 'hidden' }}>
+        <Watermark src="/sampling/garden-lush-green-leaves.jpeg" position="right" opacity={0.07} bgSize="cover" rotate="12deg" />
+        <div className="sec" style={{ position: 'relative', zIndex: 1 }}>
           <Reveal><div className="sec-tag">Academic Programs</div></Reveal>
           <Reveal delay={0.06}><h2 className="sec-h">Learning That<br />Grows with You</h2></Reveal>
           <Reveal delay={0.12}>
@@ -574,6 +614,51 @@ export default function App() {
             </Reveal>
           </div>
         </div>
+
+        {/* ── Video Block ── */}
+        <Reveal delay={0.1}>
+          <div className="video-block">
+            <div className="video-label">
+              <span className="sec-tag" style={{ marginBottom: 0 }}>Watch Our Workshop in Action</span>
+            </div>
+            <video
+              className="workshop-video"
+              controls
+              preload="metadata"
+              poster="/sampling/varieties-coco-pots-collection.jpeg"
+            >
+              <source src="/video/WhatsApp Video 2026-03-28 at 10.11.25 PM.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </Reveal>
+      </div>
+
+      {/* ══════════ COMMUNITY IMPACT ══════════ */}
+      <div className="community-wrap" id="community">
+        <div className="sec">
+          <Reveal><div className="sec-tag">Community Impact</div></Reveal>
+          <Reveal delay={0.06}><h2 className="sec-h">Growing Minds,<br />Growing Food</h2></Reveal>
+          <Reveal delay={0.12}>
+            <p className="sec-p">
+              Real families and children learning to grow, cook, and eat nutritious microgreens at home.
+              Our community programs turn every kitchen and balcony into a micro-farm.
+            </p>
+          </Reveal>
+          <div className="community-grid">
+            {communityImages.map((img, i) => (
+              <Reveal key={i} delay={i * 0.06}>
+                <div className="community-card" onClick={() => setLightbox({ type: 'community', index: i })}>
+                  <div className="community-img-wrap">
+                    <img src={img.src} alt={img.name} loading="lazy" />
+                  </div>
+                  <div className="community-caption">
+                    <div className="community-note">"{img.note}"</div>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* ══════════ GALLERY (Sampling Images) ══════════ */}
@@ -600,23 +685,25 @@ export default function App() {
 
       {/* ── Lightbox ── */}
       {lightbox !== null && (() => {
-        const isGallery = typeof lightbox === 'object' && lightbox.type === 'gallery'
-        const images = isGallery ? samplingImages : allImages
-        const idx = isGallery ? lightbox.index : lightbox
+        const type = typeof lightbox === 'object' ? lightbox.type : 'workshop'
+        const images = type === 'gallery' ? samplingImages : type === 'community' ? communityImages : allImages
+        const idx = typeof lightbox === 'object' ? lightbox.index : lightbox
+        const next = (i) => type === 'workshop' ? i : { type, index: i }
         return (
           <div className="lb" onClick={() => setLightbox(null)}>
             <button className="lb-btn lb-close" onClick={() => setLightbox(null)}><Icon.X /></button>
-            <button className="lb-btn lb-prev" onClick={e => { e.stopPropagation(); const newIdx = (idx - 1 + images.length) % images.length; setLightbox(isGallery ? { type: 'gallery', index: newIdx } : newIdx) }}><Icon.ChevL /></button>
+            <button className="lb-btn lb-prev" onClick={e => { e.stopPropagation(); setLightbox(next((idx - 1 + images.length) % images.length)) }}><Icon.ChevL /></button>
             <img src={images[idx].src} alt="" onClick={e => e.stopPropagation()} />
-            <div className="lb-cap">{images[idx].caption}</div>
-            <button className="lb-btn lb-next" onClick={e => { e.stopPropagation(); const newIdx = (idx + 1) % images.length; setLightbox(isGallery ? { type: 'gallery', index: newIdx } : newIdx) }}><Icon.ChevR /></button>
+            {images[idx].caption && <div className="lb-cap">{images[idx].caption}</div>}
+            <button className="lb-btn lb-next" onClick={e => { e.stopPropagation(); setLightbox(next((idx + 1) % images.length)) }}><Icon.ChevR /></button>
           </div>
         )
       })()}
 
       {/* ══════════ SERVICES ══════════ */}
-      <div className="services-wrap" id="services">
-        <div className="sec">
+      <div className="services-wrap" id="services" style={{ position: 'relative', overflow: 'hidden' }}>
+        <Watermark src="/sampling/radish-lush-tray-white.jpeg" position="center" opacity={0.06} />
+        <div className="sec" style={{ position: 'relative', zIndex: 1 }}>
           <Reveal><div className="sec-tag">Services</div></Reveal>
           <Reveal delay={0.06}><h2 className="sec-h">What We Offer</h2></Reveal>
           <Reveal delay={0.12}>
@@ -680,23 +767,55 @@ export default function App() {
         <div className="sec">
           <Reveal><div className="sec-tag">Impact &amp; Roadmap</div></Reveal>
           <Reveal delay={0.06}><h2 className="sec-h">Where We Are Headed</h2></Reveal>
-          <ul className="roadmap-list">
-            {[
-              'Expand nutrition education programs to more schools and communities across Tamil Nadu & neighbouring states',
-              'Develop and launch functional food innovations using microgreens',
-              'Build replicable sustainable food system models for urban institutions',
-              'Strengthen and scale research collaborations with academic and government bodies',
-              'Contribute to healthier communities and more resilient local food systems',
-            ].map((item, i) => (
-              <Reveal key={i} delay={i * 0.06}>
-                <li>
-                  <span className="roadmap-num">{String(i + 1).padStart(2, '0')}</span>
-                  <span>{item}</span>
-                </li>
-              </Reveal>
-            ))}
-          </ul>
+          <div className="roadmap-inner">
+            <ul className="roadmap-list">
+              {[
+                'Expand nutrition education programs to more schools and communities across Tamil Nadu & neighbouring states',
+                'Develop and launch functional food innovations using microgreens',
+                'Build replicable sustainable food system models for urban institutions',
+                'Strengthen and scale research collaborations with academic and government bodies',
+                'Contribute to healthier communities and more resilient local food systems',
+              ].map((item, i) => (
+                <Reveal key={i} delay={i * 0.06}>
+                  <li>
+                    <span className="roadmap-num">{String(i + 1).padStart(2, '0')}</span>
+                    <span>{item}</span>
+                  </li>
+                </Reveal>
+              ))}
+            </ul>
+            <Reveal delay={0.2} style={{ height: '100%' }}>
+              <div className="roadmap-img-col">
+                <img src="/sampling/grow-trays-led-lights.jpeg" alt="Microgreens production trays" />
+              </div>
+            </Reveal>
+          </div>
         </div>
+      </div>
+
+      {/* ══════════ KIT CTA ══════════ */}
+      <div className="kit-cta-wrap">
+        <Reveal>
+          <div className="kit-cta-inner">
+            <div className="kit-cta-img-col">
+              <img src="/sampling/grow-kit-shelf-led.jpeg" alt="Young Growers Microgreen Kit" className="kit-cta-img" />
+            </div>
+            <div className="kit-cta-content">
+              <div className="sec-tag" style={{ marginBottom: 16 }}>Grow Kit</div>
+              <h2 className="kit-cta-h">Start Growing<br />Microgreens at Home</h2>
+              <p className="kit-cta-p">Our <strong>Young Growers Microgreen Kit</strong> comes with everything you need — trays, seeds, growing medium, and step-by-step guidance. From seed to harvest in just 7–14 days, right on your shelf.</p>
+              <ul className="kit-cta-list">
+                <li><span className="bullet"><Icon.Check /></span>Ready-to-use grow trays &amp; LED grow light setup</li>
+                <li><span className="bullet"><Icon.Check /></span>Multiple microgreen varieties included</li>
+                <li><span className="bullet"><Icon.Check /></span>Beginner-friendly — no farming experience needed</li>
+                <li><span className="bullet"><Icon.Check /></span>Perfect for homes, schools &amp; corporate wellness</li>
+              </ul>
+              <a href="mailto:sivsankrivitagreen@gmail.com?subject=Young Growers Microgreen Kit Enquiry" className="btn btn-primary kit-cta-btn">
+                Contact Us for Your Kit <Icon.Arrow />
+              </a>
+            </div>
+          </div>
+        </Reveal>
       </div>
 
       {/* ══════════ CONTACT ══════════ */}
