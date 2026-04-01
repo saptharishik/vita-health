@@ -172,8 +172,8 @@ export default function App() {
   const navSolid = scrollY > 60
 
   /* ── Watermark helper ── */
-  const Watermark = ({ src, position = 'right', opacity = 0.07, bgPos, bgSize, rotate, wmStyle }) => (
-    <div className="wm" style={{
+  const Watermark = ({ src, position = 'right', opacity = 0.07, bgPos, bgSize, rotate, wmStyle, wmClass }) => (
+    <div className={`wm${wmClass ? ' ' + wmClass : ''}`} style={{
       backgroundImage: `url('${src}')`,
       backgroundPosition: bgPos || (position === 'right' ? 'center right' : position === 'center' ? 'center center' : 'center left'),
       backgroundSize: bgSize || 'contain',
@@ -444,7 +444,7 @@ export default function App() {
 
       {/* ══════════ RESEARCH ══════════ */}
       <div className="research-wrap" id="research" style={{ position: 'relative', overflow: 'hidden' }}>
-        <Watermark src="/sampling/sunflower-sprouts-white-bg.jpg" position="left" opacity={0.07} bgSize="45% auto" bgPos="left center" />
+        <Watermark src="/sampling/sunflower-sprouts-white-bg.jpg" position="left" opacity={0.07} bgSize="contain" bgPos="left center" wmClass="wm-research" />
         <div className="sec" style={{ position: 'relative', zIndex: 1 }}>
           <Reveal><div className="sec-tag">Research &amp; Innovation</div></Reveal>
           <Reveal delay={0.06}><h2 className="sec-h">Climate-Resilient<br />Agriculture Research</h2></Reveal>
