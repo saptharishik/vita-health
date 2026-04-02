@@ -74,37 +74,31 @@ const Icon = {
 
 /* ── Workshop Images ── */
 const workshopImages = [
-  { src: '/workshop-images/workshop-students-session.jpeg', caption: 'Our facilitator conducts an interactive session on microgreens as sustainable superfoods at Prasan Vidya Mandir, Mamandur' },
-  { src: '/workshop-images/workshop-hands-on.jpeg', caption: 'Students seated in groups across the school hall, recording growth observations and completing their cultivation worksheets with cocopeat trays beside them' },
-  { src: '/workshop-images/workshop-instructor-teaching.jpeg', caption: 'Overhead view of students with their individual cocopeat growing kits and seed vials, documenting their planting process step by step' },
-  { src: '/workshop-images/workshop-qa-session.jpeg', caption: 'Students raise their hands enthusiastically during the Q&A session of the Microgreens Program' },
-  { src: '/sampling/child-coco-pots-explorer.jpeg', caption: 'Young learner exploring multiple microgreens varieties growing in coconut coir pots — hands-on learning from an early age' },
+  { src: '/workshop-images/workshop-home-growing-journey.jpg', caption: 'Home growing journey — hands-on learning with patience, curiosity, and joy' },
+  { src: '/workshop-images/workshop-family-session.jpg', caption: 'Community family session — growing together, learning together' },
+  { src: '/workshop-images/workshop-school-training.jpg', caption: 'Multi-level training program — school, college, and institutional outreach' },
 ]
 
 /* ── Gallery Images (curated microgreens varieties & farm setup) ── */
 const samplingImages = [
   { src: '/sampling/varieties-coco-pots-collection.jpeg' },
   { src: '/sampling/grow-trays-led-lights.jpeg' },
-  { src: '/sampling/grow-kit-shelf-led.jpeg' },
-  { src: '/sampling/amaranth-red-macro.png' },
-  { src: '/sampling/varieties-rainbow-overhead.png' },
   { src: '/sampling/radish-coco-pot-lush.jpeg' },
   { src: '/sampling/garden-lush-green-leaves.jpeg' },
   { src: '/sampling/sunflower-cotyledon-tray.jpeg' },
-  { src: '/sampling/amaranth-pink-bunch-white.jpeg' },
   { src: '/sampling/amaranth-crimson-dense.jpg' },
+  { src: '/sampling/pea-shoots-tendrils.jpg' },
+  { src: '/sampling/radish-green-tray-dense.jpeg' },
+  { src: '/sampling/sunflower-dark-macro.jpg' },
+  { src: '/sampling/amaranth-dense-red-close.jpeg' },
 ]
 
-/* ── Community Program Photos ── */
+/* ── Community / Workshop Photos ── */
 const communityImages = [
-  { src: '/sampling/community-home-grower-growing.jpeg', name: 'Priya', note: 'Growing my own food at home!' },
-  { src: '/sampling/community-kids-seed-harvest.jpeg', name: 'Community Kids', note: 'Learning to grow, seed to harvest' },
-  { src: '/sampling/community-home-program-healthy.jpeg', name: 'Home Program', note: 'Healthy eating with microgreens' },
-  { src: '/sampling/community-child-first-harvest.jpeg', name: 'Arjun', note: 'My first microgreens harvest!' },
-  { src: '/sampling/community-home-grower-setup.jpeg', name: 'Divya', note: 'Learning nutrition through food' },
-  { src: '/sampling/community-cooking-session.jpeg', name: 'Group Session', note: 'Cooking together with microgreens' },
-  { src: '/sampling/community-child-watering.jpeg', name: 'Ananya', note: 'Watering my microgreens tray' },
-  { src: '/sampling/community-girl-harvest-day.jpeg', name: 'Kavya', note: 'Harvesting day — seed to plate!' },
+  { src: '/workshop-images/workshop-home-growing-journey.jpg', note: 'Hands-on growing at home — every child a little farmer' },
+  { src: '/workshop-images/workshop-family-session.jpg', note: 'Family community session — learning together' },
+  { src: '/workshop-images/workshop-school-training.jpg', note: 'School training program in action' },
+  { src: '/sampling/child-coco-pots-explorer.jpeg', note: 'Exploring microgreen varieties in coconut coir pots' },
 ]
 
 /* ── Navigation ── */
@@ -115,11 +109,11 @@ const navItems = [
   ['research', 'Research & Innovation'],
   ['academics', 'Academic Programs'],
   ['workshop', 'Workshops & Training'],
-  ['community', 'Community'],
-  ['gallery', 'Gallery'],
   ['services', 'Services'],
   ['collaborations', 'Collaborations'],
   ['roadmap', 'Impact & Roadmap'],
+  ['feedback', 'Testimonials'],
+  ['founder', 'Founder'],
   ['contact', 'Contact'],
 ]
 
@@ -230,9 +224,9 @@ export default function App() {
             </Reveal>
             <Reveal delay={0.16}>
               <p className="hero-sub">
-                Developing microgreens-based functional foods to combat triple burden of malnutrition
-                — through research, education, and community programs that promote climate-resilient,
-                eco-friendly sustainable food systems.
+                What if you could grow the most nutrient-dense food on the planet — in 7 days,
+                in your kitchen, with no farming experience? We've built programs, research, and
+                community movements around exactly that question. And the results are changing lives.
               </p>
             </Reveal>
             <Reveal delay={0.24}>
@@ -249,8 +243,7 @@ export default function App() {
           <Reveal delay={0.2}>
             <div className="hero-right">
               <div className="hero-card">
-                <div style={{ position:'absolute', inset:0, backgroundImage:"url('/sampling/varieties-rainbow-overhead.png')", backgroundSize:'cover', backgroundPosition:'center', opacity:0.09, pointerEvents:'none', zIndex:0 }} />
-                <div className="hero-metrics" style={{ position:'relative', zIndex:1 }}>
+                <div className="hero-metrics">
                   <div className="hero-metric">
                     <div className="hero-metric-num">7–14</div>
                     <div className="hero-metric-label">Days Harvest Cycle</div>
@@ -294,33 +287,33 @@ export default function App() {
       </div>
 
       {/* ══════════ ABOUT ══════════ */}
-      <div className="about-wrap" id="about" style={{ position: 'relative', overflow: 'hidden' }}>
-        <Watermark src="/sampling/radish-red-stems-close.jpg" position="center" opacity={0.08} bgSize="cover" bgPos="center center" />
-        <div className="sec" style={{ position: 'relative', zIndex: 1 }}>
+      <div className="about-wrap" id="about">
+        <div className="sec">
           <Reveal><div className="sec-tag">Who We Are</div></Reveal>
-          <Reveal delay={0.06}><h2 className="sec-h">Built on Science,<br />Driven by Purpose</h2></Reveal>
+          <Reveal delay={0.06}><h2 className="sec-h">We Don't Just Grow Plants —<br />We <em>Grow Change</em></h2></Reveal>
           <div className="about-grid">
             <div>
               <Reveal delay={0.1}>
                 <p className="about-text">
-                  Sivsankri Vita Health Pvt Ltd is a Tamil Nadu–based company dedicated to developing
-                  microgreens as functional foods that address real nutrition challenges. Incorporated under the
-                  Companies Act, 2013, we operate at the intersection of food science, sustainable agriculture,
-                  and community education.
+                  I started Sivsankri Vita Health with one burning question: why are the most nutrient-dense
+                  foods still invisible to the communities that need them most? The answer we found — and
+                  the answer we're now sharing with schools, families, and institutions across Tamil Nadu —
+                  is microgreens.
                 </p>
               </Reveal>
               <Reveal delay={0.14}>
                 <p className="about-text">
-                  Our work is guided by one core belief: that the most powerful nutrition solutions are the ones
-                  that are also the most sustainable. Microgreens — young, fast-growing edible plants
-                  harvested within 7 to 14 days — which sits at the heart of everything we do.
+                  Incorporated under the Companies Act, 2013, we operate at the intersection of food science,
+                  sustainable agriculture, and community education. Every workshop we run, every kit we hand
+                  to a child, every research collaboration we build — it all points to one mission: making
+                  real nutrition accessible, growable, and unstoppable.
                 </p>
               </Reveal>
               <Reveal delay={0.18}>
                 <p className="about-text">
-                  From school workshops to research collaborations with colleges and universities, we translate
-                  science into impactful solutions — empowering students, families, and communities to grow
-                  and eat better nutritional foods.
+                  What we've discovered is profound: when you put a seed in a child's hands and watch
+                  them grow it into food in 7 days, something shifts. They eat it. They share it.
+                  They ask for more. That's the power we're harnessing — and scaling.
                 </p>
               </Reveal>
             </div>
@@ -380,18 +373,20 @@ export default function App() {
           <div className="mg-intro-grid">
             <div className="mg-intro-left">
               <Reveal><div className="sec-tag">Why Microgreens</div></Reveal>
-              <Reveal delay={0.06}><h2 className="sec-h">Small Plants<br />Big Nutrition</h2></Reveal>
+              <Reveal delay={0.06}><h2 className="sec-h">Tiny Plants.<br />Extraordinary Power.</h2></Reveal>
               <Reveal delay={0.12}>
                 <p className="sec-p" style={{ marginBottom: 0 }}>
-                  Microgreens are young edible plants harvested within 7 to 14 days of growth. They are
-                  known for their high nutrient density and fast growth cycle, making them one of the most
-                  promising options for sustainable food production in both urban and rural settings.
+                  Here's something that surprised us when we first ran the numbers: microgreens contain
+                  up to <strong style={{ color: 'var(--c-gold-light)' }}>40× more nutrients</strong> than their
+                  fully grown counterparts. Harvested in just 7–14 days, they pack vitamins, minerals, and
+                  antioxidants that most families never get from their daily diet. We didn't discover microgreens —
+                  we discovered what happens when you put them in the right hands.
                 </p>
               </Reveal>
             </div>
             <Reveal delay={0.15} style={{ display: 'flex', alignItems: 'center' }}>
               <div className="mg-intro-img">
-                <img src="/sampling/amaranth-pink-bunch-white.jpeg" alt="Fresh microgreens" />
+                <img src="/sampling/radish-coco-pot-lush.jpeg" alt="Fresh microgreens" />
               </div>
             </Reveal>
           </div>
@@ -427,7 +422,7 @@ export default function App() {
           <div className="tb-cards">
             {[
               { n: '01', t: 'Undernutrition', d: 'Improving dietary diversity by making nutrient-dense microgreens accessible and easy to grow at home and in communities.' },
-              { n: '02', t: 'Micronutrient Deficiencies', d: 'Targeting iron, mineral, and vitamin gaps through functional microgreens varieties selected for communities specific nutrient profiles.' },
+              { n: '02', t: 'Micronutrient Deficiencies (Hidden Hunger)', d: 'Targeting iron, mineral, and vitamin gaps through functional microgreens varieties selected for communities specific nutrient profiles.' },
               { n: '03', t: 'Overnutrition', d: 'Promoting plant-based, low-calorie nutrition choices to support healthier diets and reduce lifestyle-related health risks.' },
             ].map((card, i) => (
               <Reveal key={i} delay={0.1 + i * 0.08}>
@@ -443,22 +438,22 @@ export default function App() {
       </div>
 
       {/* ══════════ RESEARCH ══════════ */}
-      <div className="research-wrap" id="research" style={{ position: 'relative', overflow: 'hidden' }}>
-        <Watermark src="/sampling/sunflower-sprouts-white-bg.jpg" position="left" opacity={0.07} bgSize="contain" bgPos="left center" wmClass="wm-research" />
-        <div className="sec" style={{ position: 'relative', zIndex: 1 }}>
+      <div className="research-wrap" id="research">
+        <div className="sec">
           <Reveal><div className="sec-tag">Research &amp; Innovation</div></Reveal>
-          <Reveal delay={0.06}><h2 className="sec-h">Climate-Resilient<br />Agriculture Research</h2></Reveal>
+          <Reveal delay={0.06}><h2 className="sec-h">The Science Behind<br />Every Seed We Sow</h2></Reveal>
           <Reveal delay={0.12}>
             <p className="sec-p">
-              Climate change demands new food production systems that use fewer resources and deliver
-              more nutrition-rich foods. Our research explores how microgreens can be grown
-              and scaled in ways that are pragmatic solutions for urban communities, schools, and institutions.
+              We don't just teach people to grow microgreens — we research which varieties deliver
+              the highest nutritional impact for Indian communities, which systems work in resource-limited
+              settings, and how to make sustainable food production replicable at scale. Our lab
+              is where curiosity meets real-world nutrition challenges.
             </p>
           </Reveal>
           <div className="research-grid">
             <Reveal delay={0.16}>
               <div>
-                <h3 style={{ fontFamily: 'var(--f-display)', fontSize: '1.2rem', color: 'var(--c-forest)', marginBottom: 20, fontWeight: 600 }}>Research Areas</h3>
+                <h3 style={{ fontFamily: 'var(--f-display)', fontSize: '1.2rem', color: 'var(--c-white)', marginBottom: 20, fontWeight: 600 }}>Research Areas</h3>
                 <ul className="research-areas">
                   {[
                     'Urban agriculture systems and indoor farming techniques',
@@ -492,22 +487,22 @@ export default function App() {
       </div>
 
       {/* ══════════ ACADEMIC PROGRAMS ══════════ */}
-      <div className="acad-wrap" id="academics" style={{ position: 'relative', overflow: 'hidden' }}>
-        <Watermark src="/sampling/garden-lush-green-leaves.jpeg" position="right" opacity={0.07} bgSize="cover" rotate="12deg" />
-        <div className="sec" style={{ position: 'relative', zIndex: 1 }}>
+      <div className="acad-wrap" id="academics">
+        <div className="sec">
           <Reveal><div className="sec-tag">Academic Programs</div></Reveal>
-          <Reveal delay={0.06}><h2 className="sec-h">Learning That<br />Grows with You</h2></Reveal>
+          <Reveal delay={0.06}><h2 className="sec-h">Education That<br />Actually Sticks</h2></Reveal>
           <Reveal delay={0.12}>
             <p className="sec-p">
-              We collaborate with colleges and universities to promote learning and innovation in
-              sustainable food systems. Our academic partnerships give students hands-on exposure to
-              microgreens cultivation, nutrition research, and sustainable agriculture.
+              Textbooks tell students about nutrition. We let them <em>experience</em> it. Our academic
+              programs are designed so that by the time a student leaves the session, they've already
+              grown something, tasted something, and understood something they'll never forget.
+              We partner with schools, colleges, and communities to make that happen.
             </p>
           </Reveal>
           <div className="acad-cards">
             {[
               { icon: <Icon.Book />, title: 'School Programs', color: '#0a6b3a', bg: '#e6f5ea', points: ['Plant biology and growth cycles', 'Nutrition science basics', 'Hands-on sustainable agriculture'] },
-              { icon: <Icon.Flask />, title: 'College Programs', color: '#1a7560', bg: '#e6f5f0', points: ['Research projects in plant nutrient analysis and functional food development', 'Internship opportunities in microgreens cultivation and sustainable farming', 'Sustainability workshops and collaborative innovation labs'] },
+              { icon: <Icon.Flask />, title: 'College Programs', color: '#1a7560', bg: '#e6f5f0', points: ['Research projects in plant nutrient analysis and functional food development', 'Hands-on cultivation training and sustainable farming techniques', 'Sustainability workshops and collaborative innovation labs'] },
               { icon: <Icon.Users />, title: 'Community Programs', color: '#b8860b', bg: '#fdf6e3', points: ['Growing nutrient-dense foods at home', 'Healthy cooking with microgreens', 'Sustainable living and low-resource farming practices'] },
             ].map((card, i) => (
               <Reveal key={i} delay={0.1 + i * 0.08}>
@@ -530,126 +525,106 @@ export default function App() {
       <div className="workshop-wrap" id="workshop">
         <div className="sec">
           <Reveal><div className="sec-tag">Workshops &amp; Training</div></Reveal>
-          <Reveal delay={0.06}><h2 className="sec-h">Science Out of the Lab,<br />Into the World</h2></Reveal>
+          <Reveal delay={0.06}><h2 className="sec-h">What If Learning<br />Could <em>Feed</em> You Too?</h2></Reveal>
+          <Reveal delay={0.12}>
+            <p className="sec-p">
+              Our workshops aren't lectures. They're experiences. Participants sow seeds, watch them
+              sprout, harvest their own microgreens, and take a grow kit home. By the end, nutrition
+              isn't just a concept — it's something they grew themselves. We bring this to schools,
+              colleges, communities, corporates, and online audiences.
+            </p>
+          </Reveal>
 
-          <div className="ws-head" style={{ marginTop: 40 }}>
-            <div>
-              <Reveal delay={0.1}>
-                <h3 style={{ fontFamily: 'var(--f-display)', fontSize: '1.3rem', color: 'var(--c-forest)', fontWeight: 600, marginBottom: 12 }}>
-                  Microgreens Workshop — The Ashok Leyland School
-                </h3>
-              </Reveal>
-              <Reveal delay={0.14}>
-                <p className="sec-p">
-                  We took science out of the lab and into the classroom. Students from Grade 7 and Grade 9
-                  planted, cultivated, monitored, and harvested their own microgreens over a 7-day growth
-                  cycle — building a real understanding of sustainable nutrition from seed to plate.
-                </p>
-              </Reveal>
+          {/* Program stats */}
+          <Reveal delay={0.18}>
+            <div className="ws-stats" style={{ marginTop: 20, marginBottom: 32 }}>
+              <div><div className="ws-stat-n"><Counter target={500} suffix="+" /></div><div className="ws-stat-l">Participants Trained</div></div>
+              <div><div className="ws-stat-n"><Counter target={7} /></div><div className="ws-stat-l">Day Growth Cycle</div></div>
+              <div><div className="ws-stat-n"><Counter target={10} suffix="+" /></div><div className="ws-stat-l">Programs Conducted</div></div>
+              <div><div className="ws-stat-n">5</div><div className="ws-stat-l">Program Formats</div></div>
             </div>
-            <Reveal delay={0.18}>
-              <div className="ws-stats">
-                <div>
-                  <div className="ws-stat-n"><Counter target={100} suffix="+" /></div>
-                  <div className="ws-stat-l">Students Trained</div>
+          </Reveal>
+
+          {/* 4-step program flow */}
+          <div className="ws-program-steps">
+            {[
+              { day: 'Step 1', time: '45–60 min', icon: <Icon.Book />, title: 'Nutrition & Awareness Session', desc: 'Introduction to nutrition gaps, the power of microgreens, and why growing your own food matters' },
+              { day: 'Step 2', time: 'Hands-on', icon: <Icon.Sprout />, title: 'Live Growing Demo', desc: 'Participants set up their own trays with hands-on sowing guided by our expert facilitator' },
+              { day: 'Step 3', time: '5 min/day', icon: <Icon.Drop />, title: 'Daily Observation', desc: 'Participants water, observe and record growth — building science mindset and responsibility' },
+              { day: 'Step 4', time: 'Celebration', icon: <Icon.Target />, title: 'Harvest & Celebrate', desc: 'Participants harvest their microgreens and take home grow kits to continue the journey' },
+            ].map((s, i) => (
+              <Reveal key={i} delay={0.08 + i * 0.08}>
+                <div className="ws-program-step">
+                  <div className="ws-step-top">
+                    <div className="ws-step-icon">{s.icon}</div>
+                    <div><span className="ws-step-day">{s.day}</span><span className="ws-step-time">{s.time}</span></div>
+                  </div>
+                  <h4>{s.title}</h4>
+                  <p>{s.desc}</p>
                 </div>
-                <div>
-                  <div className="ws-stat-n">2</div>
-                  <div className="ws-stat-l">Grade Levels</div>
-                </div>
-                <div>
-                  <div className="ws-stat-n"><Counter target={7} /></div>
-                  <div className="ws-stat-l">Day Growth Cycle</div>
-                </div>
-              </div>
-            </Reveal>
+              </Reveal>
+            ))}
           </div>
 
-          {/* Carousel */}
-          <div className="ws-carousel-outer">
-            <div className="ws-carousel">
-              <div className="ws-slide ws-slide-prev" onClick={() => { setWsDir(-1); setWsSlide(s => (s - 1 + allImages.length) % allImages.length) }}>
-                <img src={allImages[(wsSlide - 1 + allImages.length) % allImages.length].src} alt="" />
-              </div>
-              <div className={`ws-slide ws-slide-active ${wsDir > 0 ? 'dir-next' : 'dir-prev'}`} key={wsSlide} onClick={() => setLightbox(wsSlide)}>
-                <img src={allImages[wsSlide].src} alt={allImages[wsSlide].caption} />
-              </div>
-              <div className="ws-slide ws-slide-next" onClick={() => { setWsDir(1); setWsSlide(s => (s + 1) % allImages.length) }}>
-                <img src={allImages[(wsSlide + 1) % allImages.length].src} alt="" />
-              </div>
-            </div>
-            <div className="ws-active-cap">{allImages[wsSlide].caption}</div>
-            <div className="ws-carousel-nav">
-              <button className="ws-arrow" onClick={() => { setWsDir(-1); setWsSlide(s => (s - 1 + allImages.length) % allImages.length) }}><Icon.ChevL /></button>
-              <div className="ws-dots-row">
-                {allImages.map((_, i) => (
-                  <button key={i} className={`ws-dot${wsSlide === i ? ' active' : ''}`} onClick={() => { setWsDir(i > wsSlide ? 1 : -1); setWsSlide(i) }} />
-                ))}
-              </div>
-              <button className="ws-arrow" onClick={() => { setWsDir(1); setWsSlide(s => (s + 1) % allImages.length) }}><Icon.ChevR /></button>
-            </div>
-          </div>
-
-          {/* Workshop types */}
-          <div className="ws-types">
-            <Reveal>
-              <div className="ws-type-card">
-                <h3>Microgreens Workshop Curated</h3>
-                <ul className="ws-type-list">
-                  {[
-                    'How to grow and harvest microgreens step by step',
-                    'Health and nutritional benefits of different microgreen varieties',
-                    'Simple, practical recipes to include microgreens in daily meals',
-                  ].map((item, i) => (
-                    <li key={i}><span className="chk"><Icon.Check /></span>{item}</li>
+          {/* Kit + Outcomes */}
+          <div className="ws-kit-outcomes">
+            <Reveal delay={0.1}>
+              <div className="ws-kit-card">
+                <div className="ws-kit-head"><Icon.Target /><h3>Participant Kit Includes</h3></div>
+                <ul>
+                  {['Grow base (tray with growing medium)', 'Microgreens seed pack', 'Hand sprayer', 'Activity worksheet (nutrition + growing steps)', 'Participation certificate'].map((item, i) => (
+                    <li key={i}><span className="bullet"><Icon.Check /></span>{item}</li>
                   ))}
                 </ul>
               </div>
             </Reveal>
-            <Reveal delay={0.08}>
-              <div className="ws-type-card">
-                <h3>Urban Microgreens Farming Training</h3>
-                <p>Training individuals and institutions in small-scale food production systems — covering indoor farming setup, space planning, and day-to-day cultivation management.</p>
+            <Reveal delay={0.16}>
+              <div className="ws-kit-card">
+                <div className="ws-kit-head"><Icon.Flask /><h3>Expected Outcomes</h3></div>
+                <ul>
+                  {[
+                    { icon: <Icon.Users />, text: 'Improved nutrition awareness among participants' },
+                    { icon: <Icon.Sprout />, text: 'Adoption of microgreens growing at home & school' },
+                    { icon: <Icon.Book />, text: 'Enhanced understanding of sustainable food systems' },
+                    { icon: <Icon.Drop />, text: 'Long-term healthy food behaviour change' },
+                  ].map((item, i) => (
+                    <li key={i}><span className="ws-outcome-icon">{item.icon}</span>{item.text}</li>
+                  ))}
+                </ul>
+                <p className="ws-outcome-quote">"Children eat what they grow" — Participants who grow their own food show increased willingness to eat greens and positive lifestyle change.</p>
               </div>
             </Reveal>
           </div>
-        </div>
 
-        {/* ── Video Block ── */}
-        <Reveal delay={0.1}>
-          <div className="video-block">
-            <div className="video-label">
-              <span className="sec-tag" style={{ marginBottom: 0 }}>Watch Our Workshop in Action</span>
-            </div>
-            <video
-              className="workshop-video"
-              controls
-              preload="metadata"
-              poster="/sampling/varieties-coco-pots-collection.jpeg"
-            >
-              <source src="/video/WhatsApp Video 2026-03-28 at 10.11.25 PM.mp4" type="video/mp4" />
-            </video>
+          {/* Program types */}
+          <Reveal delay={0.1}><h3 className="ws-programs-title">Programs We Conduct</h3></Reveal>
+          <div className="ws-types">
+            {[
+              { icon: <Icon.Book />, title: 'School Programs', desc: 'Curriculum-aligned sessions covering plant biology, nutrition science, and hands-on microgreens cultivation for students of all grades.' },
+              { icon: <Icon.Users />, title: 'Community Workshops', desc: 'Neighbourhood and family sessions focused on home growing, healthy cooking with microgreens, and sustainable living practices.' },
+              { icon: <Icon.Flask />, title: 'College Programs', desc: 'Research-oriented sessions for college students — covering nutrition analysis, functional food development, and collaborative projects.' },
+              { icon: <Icon.Target />, title: 'Corporate Training', desc: 'Workplace wellness sessions introducing microgreens growing as a stress-relief activity and healthy nutrition habit for employees.' },
+              { icon: <Icon.Sprout />, title: 'Online Sessions', desc: 'Live virtual workshops for remote learners — covering growing techniques, nutrition education, and guided sowing sessions from home.' },
+            ].map((card, i) => (
+              <Reveal key={i} delay={0.06 + i * 0.07}>
+                <div className="ws-type-card">
+                  <div className="ws-type-icon">{card.icon}</div>
+                  <h3>{card.title}</h3>
+                  <p>{card.desc}</p>
+                </div>
+              </Reveal>
+            ))}
           </div>
-        </Reveal>
-      </div>
 
-      {/* ══════════ COMMUNITY IMPACT ══════════ */}
-      <div className="community-wrap" id="community">
-        <div className="sec">
-          <Reveal><div className="sec-tag">Community Impact</div></Reveal>
-          <Reveal delay={0.06}><h2 className="sec-h">Growing Minds,<br />Growing Food</h2></Reveal>
-          <Reveal delay={0.12}>
-            <p className="sec-p">
-              Real families and children learning to grow, cook, and eat nutritious microgreens at home.
-              Our community programs turn every kitchen and balcony into a micro-farm.
-            </p>
-          </Reveal>
+          {/* ── Community Impact Photos ── */}
+          <Reveal delay={0.1}><h3 className="ws-programs-title" style={{ marginTop: 64 }}>Community Impact</h3></Reveal>
+          <Reveal delay={0.12}><p className="sec-p" style={{ marginBottom: 32 }}>Real families, students, and communities growing microgreens — turning kitchens, classrooms, and balconies into micro-farms.</p></Reveal>
           <div className="community-grid">
             {communityImages.map((img, i) => (
               <Reveal key={i} delay={i * 0.06}>
                 <div className="community-card" onClick={() => setLightbox({ type: 'community', index: i })}>
                   <div className="community-img-wrap">
-                    <img src={img.src} alt={img.name} loading="lazy" />
+                    <img src={img.src} alt={img.note} loading="lazy" />
                   </div>
                   <div className="community-caption">
                     <div className="community-note">"{img.note}"</div>
@@ -658,19 +633,10 @@ export default function App() {
               </Reveal>
             ))}
           </div>
-        </div>
-      </div>
 
-      {/* ══════════ GALLERY (Sampling Images) ══════════ */}
-      <div className="gallery-wrap" id="gallery">
-        <div className="sec">
-          <Reveal><div className="sec-tag">Gallery</div></Reveal>
-          <Reveal delay={0.06}><h2 className="sec-h">Our Work in Action</h2></Reveal>
-          <Reveal delay={0.12}>
-            <p className="sec-p">
-              A glimpse into our microgreens cultivation, research, and community engagement activities.
-            </p>
-          </Reveal>
+          {/* ── Microgreens Gallery ── */}
+          <Reveal delay={0.1}><h3 className="ws-programs-title" style={{ marginTop: 64 }}>Microgreens Gallery</h3></Reveal>
+          <Reveal delay={0.12}><p className="sec-p" style={{ marginBottom: 32 }}>A glimpse into the varieties, growing systems, and produce coming out of our cultivation work.</p></Reveal>
           <div className="gallery-grid">
             {samplingImages.map((img, i) => (
               <Reveal key={i} delay={i * 0.05}>
@@ -680,7 +646,20 @@ export default function App() {
               </Reveal>
             ))}
           </div>
+
         </div>
+
+        {/* ── Video Block ── */}
+        <Reveal delay={0.1}>
+          <div className="video-block">
+            <div className="video-label">
+              <span className="sec-tag" style={{ marginBottom: 0 }}>Watch Our Workshop in Action</span>
+            </div>
+            <video className="workshop-video" controls preload="metadata" poster="/sampling/varieties-coco-pots-collection.jpeg">
+              <source src="/video/WhatsApp Video 2026-03-28 at 10.11.25 PM.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </Reveal>
       </div>
 
       {/* ── Lightbox ── */}
@@ -701,24 +680,23 @@ export default function App() {
       })()}
 
       {/* ══════════ SERVICES ══════════ */}
-      <div className="services-wrap" id="services" style={{ position: 'relative', overflow: 'hidden' }}>
-        <Watermark src="/sampling/radish-lush-tray-white.jpeg" position="center" opacity={0.06} />
-        <div className="sec" style={{ position: 'relative', zIndex: 1 }}>
+      <div className="services-wrap" id="services">
+        <div className="sec">
           <Reveal><div className="sec-tag">Services</div></Reveal>
-          <Reveal delay={0.06}><h2 className="sec-h">What We Offer</h2></Reveal>
+          <Reveal delay={0.06}><h2 className="sec-h">What We Can Do<br />For Your Organisation</h2></Reveal>
           <Reveal delay={0.12}>
             <p className="sec-p">
-              Comprehensive support for nutrition education, sustainable agriculture, and microgreens
-              innovation — tailored separately for schools, institutions, and communities.
+              Whether you run a school, a college department, a corporate HR team, or a community NGO —
+              we have a program designed specifically for you. Here's what we bring to the table.
             </p>
           </Reveal>
           <div className="srv-grid">
             {[
-              'Nutrition education programs for schools, colleges, and community groups',
-              'Sustainable agriculture training and hands-on microgreens cultivation guidance',
-              'Urban farming setup support for institutions and individuals',
-              'Research collaboration support for functional food and microgreens innovation',
-              'Educational workshops tailored to audience and with specific goals',
+              'Customised nutrition education programs for schools, colleges, and community groups',
+              'Hands-on microgreens cultivation workshops — from single sessions to multi-week programs',
+              'Urban farming setup and consultation for institutions, offices, and homes',
+              'Research collaboration and functional food innovation partnerships with academic bodies',
+              'Corporate wellness programs — stress-relief, team-building, and healthy habit formation through growing',
             ].map((item, i) => (
               <Reveal key={i} delay={i * 0.06}>
                 <div className="srv-item">
@@ -738,15 +716,15 @@ export default function App() {
           <Reveal delay={0.06}><h2 className="sec-h">Growing Together</h2></Reveal>
           <Reveal delay={0.12}>
             <p className="sec-p">
-              We partner with schools, colleges and universities, NGOs, nutrition researchers, and
-              agriculture innovators for combined &amp; synergistic outcomes. These partnerships help expand
-              our reach across research, education, and community for resonating impact.
+              The best outcomes happen when the right people work together. We actively seek
+              partnerships with schools, colleges, NGOs, researchers, and agri-innovators who share
+              our belief that sustainable nutrition is not optional — it's essential.
             </p>
           </Reveal>
           <div className="collab-cards">
             {[
               { icon: <Icon.Book />, bg: '#e6f5ea', color: '#0a6b3a', title: 'Schools', desc: 'Nutrition education and microgreens workshops' },
-              { icon: <Icon.Flask />, bg: '#eaf0fa', color: '#2a5aa5', title: 'Colleges & Universities', desc: 'Research projects and student internships' },
+              { icon: <Icon.Flask />, bg: '#eaf0fa', color: '#2a5aa5', title: 'Colleges & Universities', desc: 'Research projects and collaborative academic programs' },
               { icon: <Icon.Users />, bg: '#f3eafa', color: '#7a3db8', title: 'NGOs', desc: 'Community outreach and sustainable living programs' },
               { icon: <Icon.Target />, bg: '#fdf6e3', color: '#b8860b', title: 'Nutrition Researchers', desc: 'Collaborative studies and data-driven scientific publications' },
               { icon: <Icon.Sprout />, bg: '#e6f5f0', color: '#1a7560', title: 'Agriculture Innovators', desc: 'Technology development & transfer and farming systems development' },
@@ -798,17 +776,17 @@ export default function App() {
         <Reveal>
           <div className="kit-cta-inner">
             <div className="kit-cta-img-col">
-              <img src="/sampling/grow-kit-shelf-led.jpeg" alt="Young Growers Microgreen Kit" className="kit-cta-img" />
+              <img src="/sampling/young-growers-kit-illustration.jpeg" alt="Young Growers Microgreen Kit" className="kit-cta-img" />
             </div>
             <div className="kit-cta-content">
               <div className="sec-tag" style={{ marginBottom: 16 }}>Grow Kit</div>
-              <h2 className="kit-cta-h">Start Growing<br />Microgreens at Home</h2>
-              <p className="kit-cta-p">Our <strong>Young Growers Microgreen Kit</strong> comes with everything you need — trays, seeds, growing medium, and step-by-step guidance. From seed to harvest in just 7–14 days, right on your shelf.</p>
+              <h2 className="kit-cta-h">Your First Harvest<br />Is 7 Days Away</h2>
+              <p className="kit-cta-p">The <strong>Young Growers Microgreen Kit</strong> is how we bring the workshop home. Everything inside is ready to go — open the box, sow the seeds, and watch something extraordinary grow right on your shelf.</p>
               <ul className="kit-cta-list">
-                <li><span className="bullet"><Icon.Check /></span>Ready-to-use grow trays &amp; LED grow light setup</li>
-                <li><span className="bullet"><Icon.Check /></span>Multiple microgreen varieties included</li>
-                <li><span className="bullet"><Icon.Check /></span>Beginner-friendly — no farming experience needed</li>
-                <li><span className="bullet"><Icon.Check /></span>Perfect for homes, schools &amp; corporate wellness</li>
+                <li><span className="bullet"><Icon.Check /></span>Grow trays, growing medium &amp; curated seed varieties — all included</li>
+                <li><span className="bullet"><Icon.Check /></span>Step-by-step guidance so anyone can grow it — no experience needed</li>
+                <li><span className="bullet"><Icon.Check /></span>Harvest nutrition in 7–14 days, fresh from your own shelf</li>
+                <li><span className="bullet"><Icon.Check /></span>Perfect for homes, school labs &amp; corporate wellness corners</li>
               </ul>
               <a href="mailto:sivsankrivitagreen@gmail.com?subject=Young Growers Microgreen Kit Enquiry" className="btn btn-primary kit-cta-btn">
                 Contact Us for Your Kit <Icon.Arrow />
@@ -816,6 +794,63 @@ export default function App() {
             </div>
           </div>
         </Reveal>
+      </div>
+
+      {/* ══════════ FEEDBACK ══════════ */}
+      <div className="feedback-wrap" id="feedback">
+        <div className="sec">
+          <Reveal><div className="sec-tag">Testimonials</div></Reveal>
+          <Reveal delay={0.06}><h2 className="sec-h">What People Say<br />About Us</h2></Reveal>
+          <Reveal delay={0.12}><p className="sec-p">Real voices from the communities, schools, colleges, and organisations we have worked with.</p></Reveal>
+          <div className="feedback-grid">
+            {[
+              { initials: 'SM', name: 'Sunitha M.', role: 'Parent — Community Workshop', color: '#2d6a2d', stars: 5, text: '"Thank you so much, Akka, for the wonderful session for the kids and the mini get-together! It was great learning a new skill to help nurture the kids. We\'ve already started our first project with mustard seeds. Looking forward to see them grow!!!!"' },
+              { initials: 'SR', name: 'Student Participant', role: 'Prasan Vidya Mandir, Mamandur — Class 6', color: '#1a7560', stars: 5, text: '"It\'s a wonderful opportunity to learn about the microgreens. Part of healthy life. I actively participated in sowing the seeds and daily observation. I enjoyed the activity and would love to do similar hands-on activities again!"' },
+              { initials: 'PK', name: 'Prof. Priya K.', role: 'Head of Nutrition Dept — College Program', color: '#b8860b', stars: 5, text: '"The college session by Sivsankri Vita Health was a breakthrough experience for our students. The research-backed content combined with hands-on growing practice gave our nutrition students a completely new perspective on functional foods and sustainable agriculture."' },
+              { initials: 'AR', name: 'Arjun R.', role: 'HR Manager — Corporate Wellness Program', color: '#4a3db8', stars: 5, text: '"We hosted a corporate microgreens session for our team as part of our wellness initiative. The response was incredible — employees found it relaxing, educational, and genuinely inspiring. We\'ve already ordered grow kits for the office. Highly recommend to any organisation!"' },
+            ].map((fb, i) => (
+              <Reveal key={i} delay={0.08 + i * 0.08}>
+                <div className="feedback-card">
+                  <div className="feedback-stars">{'★'.repeat(fb.stars)}</div>
+                  <p className="feedback-text">{fb.text}</p>
+                  <div className="feedback-person">
+                    <div className="feedback-avatar" style={{ background: fb.color }}>{fb.initials}</div>
+                    <div><div className="feedback-name">{fb.name}</div><div className="feedback-role">{fb.role}</div></div>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* ══════════ FOUNDER ══════════ */}
+      <div className="founder-wrap" id="founder">
+        <div className="sec">
+          <Reveal><div className="sec-tag">The Visionary Behind It All</div></Reveal>
+          <Reveal delay={0.06}><h2 className="sec-h">Science, Purpose,<br />and a <em>Seed</em></h2></Reveal>
+          <Reveal delay={0.12}>
+            <div className="founder-card">
+              <div className="founder-avatar"><img src="/founder photo/founder-dr-hemalatha.jpeg" alt="Dr. Hemalatha Rajaram" style={{ width:'100%', height:'100%', objectFit:'cover', borderRadius:'50%' }} /></div>
+              <div className="founder-info">
+                <h3 className="founder-name">Dr. Hemalatha Rajaram</h3>
+                <div className="founder-qual">M.Pharm., PhD — University of Queensland, Australia</div>
+                <div className="founder-role">Founder &amp; CEO — Sivsankri Vita Health Pvt. Ltd.</div>
+                <div className="founder-tags">
+                  {['Scientist', 'Educator', 'Wellness Advocate', 'Sustainable Food Researcher'].map((t, i) => (
+                    <span key={i} className="founder-tag">{t}</span>
+                  ))}
+                </div>
+                <p className="founder-bio">
+                  With a PhD from the University of Queensland, Australia and years of pharmaceutical and nutrition research under her belt, Dr. Hemalatha could have stayed in a lab. Instead, she chose the field — literally.
+                  She founded Sivsankri Vita Health because she saw a gap that no supplement or government scheme was filling: communities that lacked not just nutrients, but the knowledge and tools to grow their own.
+                  Today, she leads every workshop, every research collaboration, and every community outreach with the same conviction: that a child who grows their own food will never look at nutrition the same way again.
+                  That conviction is the engine of everything we build here.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
       </div>
 
       {/* ══════════ CONTACT ══════════ */}
