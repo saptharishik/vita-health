@@ -186,6 +186,7 @@ export default function App() {
       <nav className={`topnav ${navSolid ? 'solid' : ''}`}>
         <div className="topnav-inner">
           <a href="#" className="logo" onClick={e => { e.preventDefault(); scrollTo('top') }}>
+            <img src="/logo/logo.png" alt="Sivsankri Vita Health" className="logo-img" />
             <div className="logo-text">
               Sivsankri Vita Health
               <small>Private Limited</small>
@@ -440,16 +441,25 @@ export default function App() {
       {/* ══════════ RESEARCH ══════════ */}
       <div className="research-wrap" id="research">
         <div className="sec">
-          <Reveal><div className="sec-tag">Research &amp; Innovation</div></Reveal>
-          <Reveal delay={0.06}><h2 className="sec-h">The Science Behind<br />Every Seed We Sow</h2></Reveal>
-          <Reveal delay={0.12}>
-            <p className="sec-p">
-              We don't just teach people to grow microgreens — we research which varieties deliver
-              the highest nutritional impact for Indian communities, which systems work in resource-limited
-              settings, and how to make sustainable food production replicable at scale. Our lab
-              is where curiosity meets real-world nutrition challenges.
-            </p>
-          </Reveal>
+          <div className="mg-intro-grid">
+            <div className="mg-intro-left">
+              <Reveal><div className="sec-tag">Research &amp; Innovation</div></Reveal>
+              <Reveal delay={0.06}><h2 className="sec-h">The Science Behind<br />Every Seed We Sow</h2></Reveal>
+              <Reveal delay={0.12}>
+                <p className="sec-p" style={{ marginBottom: 0 }}>
+                  We don't just teach people to grow microgreens — we research which varieties deliver
+                  the highest nutritional impact for Indian communities, which systems work in resource-limited
+                  settings, and how to make sustainable food production replicable at scale. Our lab
+                  is where curiosity meets real-world nutrition challenges.
+                </p>
+              </Reveal>
+            </div>
+            <Reveal delay={0.15} style={{ display: 'flex', alignItems: 'center' }}>
+              <div className="mg-intro-img">
+                <img src="/sampling/radish-green-tray-top.jpeg" alt="Microgreens research" />
+              </div>
+            </Reveal>
+          </div>
           <div className="research-grid">
             <Reveal delay={0.16}>
               <div>
@@ -662,6 +672,31 @@ export default function App() {
         </Reveal>
       </div>
 
+      {/* ══════════ KIT CTA ══════════ */}
+      <div className="kit-cta-wrap">
+        <Reveal>
+          <div className="kit-cta-inner">
+            <div className="kit-cta-img-col">
+              <img src="/sampling/young-growers-kit-illustration.jpeg" alt="Young Growers Microgreen Kit" className="kit-cta-img" />
+            </div>
+            <div className="kit-cta-content">
+              <div className="sec-tag" style={{ marginBottom: 16 }}>Grow Kit</div>
+              <h2 className="kit-cta-h">Loved the Workshop?<br />Bring It Home.</h2>
+              <p className="kit-cta-p">The <strong>Young Growers Microgreen Kit</strong> is how we bring the workshop home. Everything inside is ready to go — open the box, sow the seeds, and watch something extraordinary grow right on your shelf.</p>
+              <ul className="kit-cta-list">
+                <li><span className="bullet"><Icon.Check /></span>Grow trays, growing medium &amp; curated seed varieties — all included</li>
+                <li><span className="bullet"><Icon.Check /></span>Step-by-step guidance so anyone can grow it — no experience needed</li>
+                <li><span className="bullet"><Icon.Check /></span>Harvest nutrition in 7–14 days, fresh from your own shelf</li>
+                <li><span className="bullet"><Icon.Check /></span>Perfect for homes, school labs &amp; corporate wellness corners</li>
+              </ul>
+              <a href="mailto:sivsankrivitagreen@gmail.com?subject=Young Growers Microgreen Kit Enquiry" className="btn btn-primary kit-cta-btn">
+                Contact Us for Your Kit <Icon.Arrow />
+              </a>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+
       {/* ── Lightbox ── */}
       {lightbox !== null && (() => {
         const type = typeof lightbox === 'object' ? lightbox.type : 'workshop'
@@ -764,36 +799,11 @@ export default function App() {
             </ul>
             <Reveal delay={0.2} style={{ height: '100%' }}>
               <div className="roadmap-img-col">
-                <img src="/sampling/grow-trays-led-lights.jpeg" alt="Microgreens production trays" />
+                <img src="/sampling/varieties-coco-pots-collection.jpeg" alt="Microgreens varieties in coco pots" />
               </div>
             </Reveal>
           </div>
         </div>
-      </div>
-
-      {/* ══════════ KIT CTA ══════════ */}
-      <div className="kit-cta-wrap">
-        <Reveal>
-          <div className="kit-cta-inner">
-            <div className="kit-cta-img-col">
-              <img src="/sampling/young-growers-kit-illustration.jpeg" alt="Young Growers Microgreen Kit" className="kit-cta-img" />
-            </div>
-            <div className="kit-cta-content">
-              <div className="sec-tag" style={{ marginBottom: 16 }}>Grow Kit</div>
-              <h2 className="kit-cta-h">Your First Harvest<br />Is 7 Days Away</h2>
-              <p className="kit-cta-p">The <strong>Young Growers Microgreen Kit</strong> is how we bring the workshop home. Everything inside is ready to go — open the box, sow the seeds, and watch something extraordinary grow right on your shelf.</p>
-              <ul className="kit-cta-list">
-                <li><span className="bullet"><Icon.Check /></span>Grow trays, growing medium &amp; curated seed varieties — all included</li>
-                <li><span className="bullet"><Icon.Check /></span>Step-by-step guidance so anyone can grow it — no experience needed</li>
-                <li><span className="bullet"><Icon.Check /></span>Harvest nutrition in 7–14 days, fresh from your own shelf</li>
-                <li><span className="bullet"><Icon.Check /></span>Perfect for homes, school labs &amp; corporate wellness corners</li>
-              </ul>
-              <a href="mailto:sivsankrivitagreen@gmail.com?subject=Young Growers Microgreen Kit Enquiry" className="btn btn-primary kit-cta-btn">
-                Contact Us for Your Kit <Icon.Arrow />
-              </a>
-            </div>
-          </div>
-        </Reveal>
       </div>
 
       {/* ══════════ FEEDBACK ══════════ */}
