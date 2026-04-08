@@ -4,8 +4,8 @@ import { Icon } from './Shared'
 
 const navItems = [
   { path: '/', label: 'Home' },
-  { path: '/workshops', label: 'Workshops' },
   { path: '/about', label: 'About Us' },
+  { path: '/workshops', label: 'Workshops' },
   { path: '/gallery', label: 'Gallery' },
 ]
 
@@ -75,33 +75,23 @@ export default function Layout({ children }) {
               <span style={{ fontFamily: 'var(--f-display)', fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', fontWeight: 600 }}>
                 Sivsankri Vita Health
               </span>
-              <p>Sivsankri Vita Health Pvt Ltd — microgreens cultivation, nutrition education, and sustainable urban agriculture for schools, institutions, and communities across Tamil Nadu.</p>
-              <div style={{ marginTop: 20 }}>
-                <a href="mailto:contact@sivsankrivitahealth.com" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: 'rgba(255,255,255,0.5)', textDecoration: 'none', fontSize: '0.82rem', fontWeight: 300 }}>
-                  <Icon.Mail /> contact@sivsankrivitahealth.com
-                </a>
-              </div>
+              <p>Microgreens cultivation, nutrition education, and sustainable urban agriculture for schools, institutions, and communities across Tamil Nadu.</p>
+              <a href="mailto:sivsankrivitagreen@gmail.com" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: 'rgba(255,255,255,0.4)', textDecoration: 'none', fontSize: '0.8rem', fontWeight: 300, marginTop: 12 }}>
+                <Icon.Mail /> sivsankrivitagreen@gmail.com
+              </a>
             </div>
             <div className="footer-col">
-              <h5>Navigate</h5>
+              <h5>Pages</h5>
               <Link to="/">Home</Link>
-              <Link to="/workshops">Workshops</Link>
               <Link to="/about">About Us</Link>
+              <Link to="/workshops">Workshops</Link>
               <Link to="/gallery">Gallery</Link>
-              <Link to="/contact">Get in Touch</Link>
-            </div>
-            <div className="footer-col">
-              <h5>Our Programs</h5>
-              <Link to="/workshops">School Programs</Link>
-              <Link to="/workshops">Community Workshops</Link>
-              <Link to="/workshops">College Programs</Link>
-              <Link to="/workshops">Corporate Training</Link>
-              <Link to="/workshops">Online Sessions</Link>
+              <Link to="/contact">Contact</Link>
             </div>
           </div>
           <div className="footer-bottom">
-            <span>&copy; 2026 Sivsankri Vita Health Private Limited. All rights reserved.</span>
-            <span style={{ color: 'rgba(255,255,255,0.25)' }}>Incorporated under Companies Act, 2013</span>
+            <span>&copy; 2026 Sivsankri Vita Health Pvt Ltd. All rights reserved.</span>
+            <span style={{ color: 'rgba(255,255,255,0.2)' }}>Incorporated under Companies Act, 2013</span>
           </div>
         </div>
       </footer>

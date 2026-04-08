@@ -25,18 +25,18 @@ export default function HomePage() {
           <div>
             <Reveal><div className="hero-eyebrow">Incorporated under Companies Act, 2013 · Tamil Nadu</div></Reveal>
             <Reveal delay={0.08}>
-              <h1>Nutrition Workshops<br />That <em>Change How</em><br />Students Eat</h1>
+              <h1>Microgreens That<br /><em>Transform</em> How<br />Communities Eat</h1>
             </Reveal>
             <Reveal delay={0.16}>
               <p className="hero-sub">
-                We bring hands-on microgreens workshops to schools, colleges, and communities —
-                where every participant <strong style={{ color: 'rgba(255,255,255,0.9)' }}>grows food in 7 days</strong> and
-                takes a grow kit home. Over 500 participants trained. Results that last.
+                The most nutrient-dense food on the planet — grown by your students in 7 days,
+                harvested by hand, taken home. We bring <strong style={{ color: 'rgba(255,255,255,0.9)' }}>PhD-backed microgreens science</strong> directly
+                into schools, colleges, and communities across Tamil Nadu.
               </p>
             </Reveal>
             <Reveal delay={0.2}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 36 }}>
-                {['Perfect for schools, colleges, NGOs & corporates', 'No prior experience needed — fully hands-on', 'Backed by PhD-level nutrition research'].map((pt, i) => (
+                {['40× more nutrients than mature vegetables — grown in 7 days', 'No soil, no pesticides, no experience needed', 'Backed by PhD-level nutrition research'].map((pt, i) => (
                   <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: '0.84rem', color: 'rgba(255,255,255,0.7)' }}>
                     <span style={{ width: 20, height: 20, borderRadius: '50%', background: 'rgba(92,184,92,0.2)', color: 'var(--c-mint)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}><Icon.Check /></span>
                     {pt}
@@ -46,11 +46,11 @@ export default function HomePage() {
             </Reveal>
             <Reveal delay={0.26}>
               <div className="hero-btns">
-                <button className="btn btn-dark" onClick={() => navigate('/contact')}>
-                  Book a Workshop <Icon.Arrow />
+                <button className="btn btn-dark" onClick={() => navigate('/workshops')}>
+                  Explore Our Programs <Icon.Arrow />
                 </button>
-                <button className="btn btn-outline" onClick={() => navigate('/workshops')}>
-                  See What We Offer
+                <button className="btn btn-outline" onClick={() => navigate('/about')}>
+                  About Us
                 </button>
               </div>
             </Reveal>
@@ -105,10 +105,10 @@ export default function HomePage() {
       <div className="stats-bar">
         <div className="stats-bar-inner">
           {[
-            { num: '500+', label: 'Students & Participants', sub: 'Trained across programs' },
-            { num: '7–14', label: 'Day Harvest Cycle', sub: 'From seed to table' },
-            { num: '40×', label: 'Nutrient Density', sub: 'vs mature vegetables' },
-            { num: '100%', label: 'Pesticide-Free', sub: 'Organic & non-GMO seeds' },
+            { num: '500+', label: 'Participants Trained', sub: 'Across schools & communities' },
+            { num: '10+', label: 'Programs Conducted', sub: 'Across Tamil Nadu' },
+            { num: '5', label: 'Program Formats', sub: 'School · College · Corporate · Online' },
+            { num: '100%', label: 'Hands-On Learning', sub: 'Every participant grows food' },
           ].map((s, i) => (
             <Reveal key={i} delay={i * 0.07}>
               <div className="stat-cell">
@@ -159,30 +159,6 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ══════════ HOW IT WORKS ══════════ */}
-      <div className="hiw-wrap">
-        <div className="sec">
-          <Reveal><div className="sec-tag">How It Works</div></Reveal>
-          <Reveal delay={0.06}><h2 className="sec-h">A Workshop That Runs<br />Itself in 3 Steps</h2></Reveal>
-          <div className="hiw-steps">
-            {[
-              { icon: <Icon.Mail />, title: 'You Reach Out', desc: 'Tell us your audience size, venue, and preferred date. We handle everything else — materials, facilitation, kits, and follow-up.' },
-              { icon: <Icon.Sprout />, title: 'We Run the Session', desc: 'Our expert facilitator runs a live nutrition + growing session. Participants sow their own trays and watch science happen in real time.' },
-              { icon: <Icon.Target />, title: 'They Take It Home', desc: 'Every participant leaves with a grow kit, a certificate, and the experience of having grown food themselves — a habit that starts day one.' },
-            ].map((step, i) => (
-              <Reveal key={i} delay={0.08 + i * 0.08}>
-                <div className="hiw-step">
-                  <div className="hiw-big-num">{String(i + 1).padStart(2, '0')}</div>
-                  <div className="hiw-step-icon">{step.icon}</div>
-                  <h3>{step.title}</h3>
-                  <p>{step.desc}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* ══════════ WHY MICROGREENS ══════════ */}
       <div className="mg-wrap" id="microgreens">
         <div className="sec">
@@ -217,6 +193,30 @@ export default function HomePage() {
                   <div className="mg-card-icon" style={{ background: card.bg, color: card.color }}>{card.icon}</div>
                   <h3>{card.title}</h3>
                   <p>{card.desc}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* ══════════ HOW IT WORKS ══════════ */}
+      <div className="hiw-wrap">
+        <div className="sec">
+          <Reveal><div className="sec-tag">How It Works</div></Reveal>
+          <Reveal delay={0.06}><h2 className="sec-h">A Workshop That Runs<br />Itself in 3 Steps</h2></Reveal>
+          <div className="hiw-steps">
+            {[
+              { icon: <Icon.Mail />, title: 'You Reach Out', desc: 'Tell us your audience size, venue, and preferred date. We handle everything else — materials, facilitation, kits, and follow-up.' },
+              { icon: <Icon.Sprout />, title: 'We Run the Session', desc: 'Our expert facilitator runs a live nutrition + growing session. Participants sow their own trays and watch science happen in real time.' },
+              { icon: <Icon.Target />, title: 'They Take It Home', desc: 'Every participant leaves with a grow kit, a certificate, and the experience of having grown food themselves — a habit that starts day one.' },
+            ].map((step, i) => (
+              <Reveal key={i} delay={0.08 + i * 0.08}>
+                <div className="hiw-step">
+                  <div className="hiw-big-num">{String(i + 1).padStart(2, '0')}</div>
+                  <div className="hiw-step-icon">{step.icon}</div>
+                  <h3>{step.title}</h3>
+                  <p>{step.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -274,7 +274,7 @@ export default function HomePage() {
       {/* ══════════ TAGLINE STRIP ══════════ */}
       <div className="tagline-strip">
         <Reveal>
-          <blockquote>"Children eat what they grow. And what they grow, <em>they never forget.</em>"</blockquote>
+          <blockquote>"Microgreens are not a trend — they are the most nutrient-dense food on the planet, <em>accessible to everyone.</em>"</blockquote>
           <cite>— Dr. Hemalatha Rajaram, Founder & CEO</cite>
         </Reveal>
       </div>

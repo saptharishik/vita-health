@@ -23,14 +23,21 @@ export default function GalleryPage() {
 
       {/* ── Page Banner ── */}
       <div className="page-banner">
-        <div className="page-banner-inner">
-          <Reveal><div className="sec-tag">Community &amp; Gallery</div></Reveal>
-          <Reveal delay={0.06}><h1 className="page-banner-h">Real People,<br />Real Harvests</h1></Reveal>
-          <Reveal delay={0.12}>
-            <p className="page-banner-p">
-              Families, students, and communities growing microgreens — turning kitchens,
-              classrooms, and balconies into micro-farms. Plus what they have to say.
-            </p>
+        <div className="page-banner-inner" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px', alignItems: 'center' }}>
+          <div>
+            <Reveal><div className="sec-tag">Community &amp; Gallery</div></Reveal>
+            <Reveal delay={0.06}><h1 className="page-banner-h">Real People,<br />Real Harvests</h1></Reveal>
+            <Reveal delay={0.12}>
+              <p className="page-banner-p">
+                Families, students, and communities growing microgreens — turning kitchens,
+                classrooms, and balconies into micro-farms. Plus what they have to say.
+              </p>
+            </Reveal>
+          </div>
+          <Reveal delay={0.2}>
+            <div style={{ borderRadius: '20px', overflow: 'hidden', height: '380px', boxShadow: '0 32px 80px rgba(0,0,0,0.4)' }}>
+              <img src="/sampling/mixed-greens-harvest-container.jpeg" alt="Microgreens harvest" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+            </div>
           </Reveal>
         </div>
       </div>

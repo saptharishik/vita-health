@@ -9,20 +9,29 @@ export default function WorkshopsPage() {
 
       {/* ── Page Banner ── */}
       <div className="page-banner">
-        <div className="page-banner-inner">
-          <Reveal><div className="sec-tag">Workshops &amp; Programs</div></Reveal>
-          <Reveal delay={0.06}><h1 className="page-banner-h">Every Program Ends<br />With a Grow Kit in Hand</h1></Reveal>
-          <Reveal delay={0.12}>
-            <p className="page-banner-p">
-              From school classrooms to corporate offices — we run nutrition workshops where
-              participants don't just learn about food. They grow it.
-            </p>
-          </Reveal>
-          <Reveal delay={0.18}>
-            <div style={{ marginTop: 28 }}>
-              <button className="btn btn-dark" onClick={() => navigate('/contact')}>
-                Book a Workshop <Icon.Arrow />
-              </button>
+        <div className="page-banner-inner" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px', alignItems: 'center' }}>
+          <div>
+            <Reveal><div className="sec-tag">Microgreens &amp; Programs</div></Reveal>
+            <Reveal delay={0.06}><h1 className="page-banner-h">40× the Nutrients.<br />Grown in <em style={{ color: 'var(--c-mint)', fontStyle: 'italic' }}>7 Days.</em></h1></Reveal>
+            <Reveal delay={0.12}>
+              <p className="page-banner-p">
+                Microgreens are the most nutrient-dense form of most vegetables —
+                harvested just 7–14 days after sowing, with no soil and no pesticides.
+                We put them in people's hands through live, experience-first programs
+                where every participant grows their own.
+              </p>
+            </Reveal>
+            <Reveal delay={0.18}>
+              <div style={{ display: 'flex', gap: 12, marginTop: 28, flexWrap: 'wrap' }}>
+                {['No Soil · No Pesticides', '7–14 Day Harvest', '100% Hands-On'].map((tag, i) => (
+                  <span key={i} style={{ padding: '6px 16px', borderRadius: '100px', border: '1px solid rgba(255,255,255,0.2)', fontSize: '0.75rem', color: 'rgba(255,255,255,0.65)', fontWeight: 500 }}>{tag}</span>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+          <Reveal delay={0.2}>
+            <div style={{ borderRadius: '20px', overflow: 'hidden', height: '380px', boxShadow: '0 32px 80px rgba(0,0,0,0.4)' }}>
+              <img src="/sampling/varieties-coco-pots-collection.jpeg" alt="Microgreens varieties in coco pots" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
             </div>
           </Reveal>
         </div>
@@ -105,7 +114,7 @@ export default function WorkshopsPage() {
                     <li key={i}><span className="ws-outcome-icon">{item.icon}</span>{item.text}</li>
                   ))}
                 </ul>
-                <p className="ws-outcome-quote">"Children eat what they grow" — Participants who grow their own food show increased willingness to eat greens and measurable positive lifestyle change.</p>
+                <p className="ws-outcome-quote">Participants who grow their own food show increased willingness to eat greens and measurable, lasting lifestyle change.</p>
               </div>
             </Reveal>
           </div>

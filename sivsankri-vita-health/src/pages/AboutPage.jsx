@@ -9,14 +9,28 @@ export default function AboutPage() {
 
       {/* ── Page Banner ── */}
       <div className="page-banner">
-        <div className="page-banner-inner">
-          <Reveal><div className="sec-tag">Our Story</div></Reveal>
-          <Reveal delay={0.06}><h1 className="page-banner-h">Science, Purpose,<br />and a <em style={{ color: 'var(--c-mint)', fontStyle: 'italic' }}>Seed</em></h1></Reveal>
-          <Reveal delay={0.12}>
-            <p className="page-banner-p">
-              Meet the founder, understand the research, and learn the vision behind Tamil Nadu's
-              leading microgreens nutrition startup.
-            </p>
+        <div className="page-banner-inner" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px', alignItems: 'center' }}>
+          <div>
+            <Reveal><div className="sec-tag">Our Story</div></Reveal>
+            <Reveal delay={0.06}><h1 className="page-banner-h">Science, Purpose,<br />and a <em style={{ color: 'var(--c-mint)', fontStyle: 'italic' }}>Seed</em></h1></Reveal>
+            <Reveal delay={0.12}>
+              <p className="page-banner-p">
+                Meet the founder, understand the research, and learn the vision behind Tamil Nadu's
+                leading microgreens nutrition startup.
+              </p>
+            </Reveal>
+            <Reveal delay={0.18}>
+              <div style={{ display: 'flex', gap: 12, marginTop: 28, flexWrap: 'wrap' }}>
+                {['PhD-Backed Research', 'Tamil Nadu Pioneer', 'Community Impact'].map((tag, i) => (
+                  <span key={i} style={{ padding: '6px 16px', borderRadius: '100px', border: '1px solid rgba(255,255,255,0.2)', fontSize: '0.75rem', color: 'rgba(255,255,255,0.65)', fontWeight: 500 }}>{tag}</span>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+          <Reveal delay={0.2}>
+            <div style={{ borderRadius: '20px', overflow: 'hidden', height: '380px', boxShadow: '0 32px 80px rgba(0,0,0,0.4)' }}>
+              <img src="/sampling/radish-green-tray-top.jpeg" alt="Fresh microgreens tray" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+            </div>
           </Reveal>
         </div>
       </div>
@@ -102,7 +116,7 @@ export default function AboutPage() {
             </div>
             <Reveal delay={0.15} style={{ display: 'flex', alignItems: 'center' }}>
               <div className="mg-intro-img">
-                <img src="/sampling/radish-green-tray-top.jpeg" alt="Microgreens research" />
+                <img src="/sampling/grow-trays-led-lights.jpeg" alt="Microgreens research lab" />
               </div>
             </Reveal>
           </div>
