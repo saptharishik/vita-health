@@ -76,8 +76,8 @@ export default function Layout({ children }) {
                 Sivsankri Vita Health
               </span>
               <p>Microgreens cultivation, nutrition education, and sustainable urban agriculture for schools, institutions, and communities across Tamil Nadu.</p>
-              <a href="mailto:sivsankrivitagreen@gmail.com" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: 'rgba(255,255,255,0.4)', textDecoration: 'none', fontSize: '0.8rem', fontWeight: 300, marginTop: 12 }}>
-                <Icon.Mail /> sivsankrivitagreen@gmail.com
+              <a href="mailto:info@sivsankrivitahealth.com" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: 'rgba(255,255,255,0.4)', textDecoration: 'none', fontSize: '0.8rem', fontWeight: 300, marginTop: 12 }}>
+                <Icon.Mail /> info@sivsankrivitahealth.com
               </a>
             </div>
             <div className="footer-col">

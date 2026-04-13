@@ -21,7 +21,7 @@ export default function AboutPage() {
             </Reveal>
             <Reveal delay={0.18}>
               <div style={{ display: 'flex', gap: 12, marginTop: 28, flexWrap: 'wrap' }}>
-                {['PhD-Backed Research', 'Tamil Nadu Pioneer', 'Community Impact'].map((tag, i) => (
+                {['Science-Backed Research', 'Tamil Nadu Pioneer', 'Community Impact'].map((tag, i) => (
                   <span key={i} style={{ padding: '6px 16px', borderRadius: '100px', border: '1px solid rgba(255,255,255,0.2)', fontSize: '0.75rem', color: 'rgba(255,255,255,0.65)', fontWeight: 500 }}>{tag}</span>
                 ))}
               </div>
@@ -55,11 +55,13 @@ export default function AboutPage() {
                   ))}
                 </div>
                 <p className="founder-bio">
-                  With a PhD from the University of Queensland, Australia and years of pharmaceutical and nutrition research under her belt, Dr. Hemalatha could have stayed in a lab. Instead, she chose the field — literally.
+                  With a PhD from the University of Queensland, Australia, and years of experience in pharmaceutical and nutrition research, Dr. Hemalatha could have remained within the walls of a laboratory. Instead, she chose to step into the field — quite literally.
                 </p>
                 <p className="founder-bio" style={{ marginTop: 12 }}>
-                  She founded Sivsankri Vita Health because she saw a gap that no supplement or government scheme was filling: communities that lacked not just nutrients, but the knowledge and tools to grow their own.
-                  Today, she leads every workshop, every research collaboration, and every community outreach with the same conviction: that a child who grows their own food will never look at nutrition the same way again.
+                  Recognizing a critical gap in both awareness and accessibility, she established Sivsankri Vita Health to empower individuals and communities with the knowledge and tools to grow their own nutritious food. Her work goes beyond supplementation, focusing on sustainable, hands-on learning that creates lasting impact.
+                </p>
+                <p className="founder-bio" style={{ marginTop: 12 }}>
+                  Today, she personally leads every workshop, research initiative, and community outreach effort with unwavering commitment. Her belief is simple yet powerful: a child who learns to grow their own food will never look at nutrition the same way again.
                 </p>
               </div>
             </div>
@@ -121,38 +123,20 @@ export default function AboutPage() {
             </Reveal>
           </div>
 
-          <div className="research-grid" style={{ marginTop: 36 }}>
+          <div style={{ marginTop: 36 }}>
             <Reveal delay={0.16}>
-              <div>
-                <h3 style={{ fontFamily: 'var(--f-display)', fontSize: '1.2rem', color: 'var(--c-white)', marginBottom: 16, fontWeight: 600 }}>What We Research</h3>
-                <ul className="research-areas">
-                  {[
-                    'Urban agriculture systems and indoor farming techniques',
-                    'Water-efficient and low-space growing systems',
-                    'Small-space food production models for homes and institutions',
-                    'Resilient microgreen varieties suited for Indian climate conditions',
-                    'Nutrient profiling of Indian microgreens varieties for community-specific needs',
-                  ].map((item, i) => (
-                    <li key={i}><span className="bullet"><Icon.Check /></span>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            </Reveal>
-            <Reveal delay={0.2}>
-              <div className="lab-card">
-                <h3>Nutrition Innovation Lab</h3>
-                <p>Our dedicated lab tests new microgreens-based food concepts, develops functional food prototypes, and conducts nutrition analysis that directly informs our community programs.</p>
-                <ul className="lab-goals">
-                  {[
-                    'Climate-resilient food systems tailored for urban settings',
-                    'Nutrient-dense functional foods derived from microgreens',
-                    'Sustainable urban agriculture models replicable at community scale',
-                    'Community nutrition programs that drive measurable health outcomes',
-                  ].map((item, i) => (
-                    <li key={i}><span className="chk"><Icon.Check /></span>{item}</li>
-                  ))}
-                </ul>
-              </div>
+              <ul className="research-areas">
+                {[
+                  'Urban agriculture systems and indoor farming techniques',
+                  'Water-efficient and low-space growing systems for homes and institutions',
+                  'Resilient microgreen varieties suited for Indian climate conditions',
+                  'Nutrient profiling of Indian microgreens varieties for community-specific needs',
+                  'Nutrient-dense functional foods derived from microgreens',
+                  'Community nutrition programs that drive measurable health outcomes',
+                ].map((item, i) => (
+                  <li key={i}><span className="bullet"><Icon.Check /></span>{item}</li>
+                ))}
+              </ul>
             </Reveal>
           </div>
         </div>

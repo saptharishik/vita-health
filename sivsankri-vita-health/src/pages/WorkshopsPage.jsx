@@ -74,7 +74,7 @@ export default function WorkshopsPage() {
               { day: 'Step 1', time: '45–60 min', icon: <Icon.Book />, title: 'Nutrition & Awareness', desc: 'Why does food quality matter? What are microgreens? How do they compare to what we eat daily? A science-led intro that surprises every audience.' },
               { day: 'Step 2', time: 'Hands-on', icon: <Icon.Sprout />, title: 'Live Growing Demo', desc: 'Participants set up their own trays with hands-on sowing guided by our facilitator. No experience needed — this is the moment it clicks.' },
               { day: 'Step 3', time: '5 min/day', icon: <Icon.Drop />, title: 'Daily Observation', desc: 'For multi-day programs, participants water, observe, and record growth — building curiosity and science mindset through direct experience.' },
-              { day: 'Step 4', time: 'Celebration', icon: <Icon.Target />, title: 'Harvest & Celebrate', desc: 'Harvest day. Participants taste what they grew, receive their kit and certificate, and leave with a habit that starts immediately.' },
+              { day: 'Step 4', time: 'Celebration', icon: <Icon.Target />, title: 'Harvest & Celebrate', desc: 'Harvest day. Participants taste what they grew, receive their kit and certificate (schools & colleges), and leave with a habit that starts immediately.' },
             ].map((s, i) => (
               <Reveal key={i} delay={0.08 + i * 0.08}>
                 <div className="ws-program-step">
@@ -189,7 +189,7 @@ export default function WorkshopsPage() {
           <Reveal delay={0.06}><h2 className="sec-h">What We Bring<br />to Your Organisation</h2></Reveal>
           <Reveal delay={0.12}>
             <p className="sec-p">
-              Whether you run a school, college department, corporate HR team, or community NGO —
+              Whether you run a school, college department, corporate team, or community NGO —
               we have a format designed for your specific audience and goals.
             </p>
           </Reveal>
@@ -199,7 +199,7 @@ export default function WorkshopsPage() {
               'Hands-on microgreens cultivation workshops — from single sessions to multi-week growing journeys',
               'Urban farming setup and consultation for institutions, offices, and homes',
               'Research collaboration and functional food innovation partnerships with academic bodies',
-              'Corporate wellness programs — stress-relief, team-building, and healthy habit formation through growing',
+              'Corporate wellness programs — stress-relief, team-building, and healthy habit formation through growing for teams',
             ].map((item, i) => (
               <Reveal key={i} delay={i * 0.06}>
                 <div className="srv-item">
@@ -229,7 +229,7 @@ export default function WorkshopsPage() {
                 <li><span className="bullet"><Icon.Check /></span>Harvest nutrition in 7–14 days, fresh from your own shelf</li>
                 <li><span className="bullet"><Icon.Check /></span>Perfect for homes, school labs &amp; corporate wellness corners</li>
               </ul>
-              <a href="mailto:sivsankrivitagreen@gmail.com?subject=Young Growers Microgreen Kit Enquiry" className="btn btn-primary kit-cta-btn">
+              <a href="mailto:info@sivsankrivitahealth.com?subject=Young Growers Microgreen Kit Enquiry" className="btn btn-primary kit-cta-btn">
                 Enquire About the Kit <Icon.Arrow />
               </a>
             </div>
@@ -237,26 +237,6 @@ export default function WorkshopsPage() {
         </Reveal>
       </div>
 
-      {/* ══════════ VIDEO ══════════ */}
-      <div className="workshop-wrap">
-        <Reveal delay={0.1}>
-          <div className="video-block">
-            <div className="video-label">
-              <span className="sec-tag" style={{ marginBottom: 0 }}>See It in Action</span>
-            </div>
-            <video className="workshop-video" controls preload="metadata" poster="/sampling/varieties-coco-pots-collection.jpeg">
-              <source src="/video/WhatsApp Video 2026-03-28 at 10.11.25 PM.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </Reveal>
-        <div className="sec" style={{ paddingTop: 0, textAlign: 'center' }}>
-          <Reveal>
-            <button className="btn btn-dark" onClick={() => navigate('/contact')} style={{ margin: '28px auto 0' }}>
-              Book a Workshop for Your School <Icon.Arrow />
-            </button>
-          </Reveal>
-        </div>
-      </div>
     </div>
   )
 }

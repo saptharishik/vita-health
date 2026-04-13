@@ -12,7 +12,7 @@ export default function ContactPage() {
     setFormStatus('sending')
     const subject = encodeURIComponent(`Website Inquiry from ${form.name}`)
     const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\nOrganization: ${form.organization}\n\nMessage:\n${form.message}`)
-    window.location.href = `mailto:contact@sivsankrivitahealth.com?subject=${subject}&body=${body}`
+    window.location.href = `mailto:info@sivsankrivitahealth.com?subject=${subject}&body=${body}`
     setFormStatus('success')
     setForm({ name: '', email: '', organization: '', message: '' })
     setTimeout(() => setFormStatus('idle'), 4000)
@@ -42,10 +42,10 @@ export default function ContactPage() {
             <div className="contact-left">
               <Reveal delay={0.1}>
                 <div className="contact-info-cards">
-                  <a href="mailto:contact@sivsankrivitahealth.com" style={{ textDecoration: 'none' }}>
+                  <a href="mailto:info@sivsankrivitahealth.com" style={{ textDecoration: 'none' }}>
                     <div className="contact-info-card">
                       <div className="contact-info-icon"><Icon.Mail /></div>
-                      <div><h4>Email Us</h4><p>contact@sivsankrivitahealth.com</p></div>
+                      <div><h4>Email Us</h4><p>info@sivsankrivitahealth.com</p></div>
                     </div>
                   </a>
                   <div className="contact-info-card">

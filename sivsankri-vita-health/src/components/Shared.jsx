@@ -79,7 +79,7 @@ export const workshopImages = [
 ]
 
 export const samplingImages = [
-  { src: '/sampling/varieties-coco-pots-collection.jpeg' },
+  { src: '/sampling/sunflower-sprouts-white-bg.jpg' },
   { src: '/sampling/grow-trays-led-lights.jpeg' },
   { src: '/sampling/radish-coco-pot-lush.jpeg' },
   { src: '/sampling/garden-lush-green-leaves.jpeg' },

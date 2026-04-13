@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { Reveal, Counter, Icon, marqueeItems } from '../components/Shared'
 
 const faqs = [
-  { q: 'Who are your workshops for?', a: 'Our workshops are designed for schools (Classes 4–12), colleges, community groups, families, NGOs, and corporates. Any group curious about nutrition and sustainable growing is welcome.' },
+  { q: 'Who can attend the workshop?', a: 'Our workshops are designed for schools (Classes 4–12), colleges, community groups, families, NGOs, and corporates. Any group curious about nutrition and sustainable growing can contact us.' },
   { q: 'Do participants need any prior experience?', a: 'None at all. From 8-year-olds to retirees — everyone can participate. We design each session to be completely hands-on and beginner-friendly.' },
   { q: 'What does a participant take home?', a: 'Every participant gets a grow kit — a tray with growing medium, seed pack, hand sprayer, and activity worksheet — so they can continue growing microgreens at home.' },
   { q: 'How long does a workshop session take?', a: 'A typical session is 2–3 hours. We also offer multi-day programs (7-day growing journeys) and online formats for schools and institutions that prefer virtual sessions.' },
@@ -29,14 +29,14 @@ export default function HomePage() {
             </Reveal>
             <Reveal delay={0.16}>
               <p className="hero-sub">
-                The most nutrient-dense food on the planet — grown by your students in 7 days,
-                harvested by hand, taken home. We bring <strong style={{ color: 'rgba(255,255,255,0.9)' }}>PhD-backed microgreens science</strong> directly
+                The most nutrient-dense food on the planet — grown by students, individuals, and working professionals in 7 days,
+                harvested by hand, taken home. We bring <strong style={{ color: 'rgba(255,255,255,0.9)' }}>science-backed microgreens knowledge</strong> directly
                 into schools, colleges, and communities across Tamil Nadu.
               </p>
             </Reveal>
             <Reveal delay={0.2}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 36 }}>
-                {['40× more nutrients than mature vegetables — grown in 7 days', 'No soil, no pesticides, no experience needed', 'Backed by PhD-level nutrition research'].map((pt, i) => (
+                {['40× more nutrients than mature vegetables — grown in 7 days', 'No soil, no pesticides, no experience needed', 'Backed by evidence-based nutrition research'].map((pt, i) => (
                   <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: '0.84rem', color: 'rgba(255,255,255,0.7)' }}>
                     <span style={{ width: 20, height: 20, borderRadius: '50%', background: 'rgba(92,184,92,0.2)', color: 'var(--c-mint)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}><Icon.Check /></span>
                     {pt}
@@ -126,7 +126,7 @@ export default function HomePage() {
         <div className="who-inner">
           <span className="who-label">We work with</span>
           <div className="who-tags">
-            {['Schools & CBSE Institutions', 'Colleges & Universities', 'Community Groups & NGOs', 'Corporate HR Teams', 'Families & Home Growers', 'Government Programs'].map((t, i) => (
+            {['Schools & CBSE Institutions', 'Colleges & Universities', 'Community Groups & NGOs', 'Corporate Teams', 'Families & Home Growers', 'Government Programs'].map((t, i) => (
               <span key={i} className="who-tag">{t}</span>
             ))}
           </div>
@@ -140,7 +140,7 @@ export default function HomePage() {
           <Reveal delay={0.06}><h2 className="sec-h">Three Ways We Create<br />Lasting Impact</h2></Reveal>
           <div className="feature-cards">
             {[
-              { icon: <Icon.Book />, bg: '#e6f5ea', color: '#0a6b3a', title: 'Nutrition Workshops', desc: 'Hands-on sessions where participants sow seeds, watch them grow, and harvest — leaving with a grow kit and a habit that sticks.', cta: 'See Workshop Programs' },
+              { icon: <Icon.Book />, bg: '#e6f5ea', color: '#0a6b3a', title: 'Nutrition Workshops', desc: 'Hands-on sessions where participants sow seeds, watch them grow, and harvest — and then leave with a grow kit and a habit that sticks.', cta: 'See Workshop Programs' },
               { icon: <Icon.Flask />, bg: '#eaf0fa', color: '#2a5aa5', title: 'Academic Programs', desc: 'Curriculum-aligned programs for schools and colleges — covering plant biology, nutrition science, and sustainability through doing.', cta: 'See Academic Programs' },
               { icon: <Icon.Sprout />, bg: '#f3eafa', color: '#7a3db8', title: 'Grow Kits & Consulting', desc: 'Take the workshop home. Our Young Growers Kit and urban farming consultation help families, offices, and institutions grow their own food.', cta: 'See Grow Kits' },
             ].map((card, i) => (
@@ -171,7 +171,7 @@ export default function HomePage() {
                   Microgreens aren't a trend. They're the most nutrient-dense form of most vegetables —
                   containing up to <strong style={{ color: 'var(--c-gold-light)' }}>40× more vitamins and antioxidants</strong> than
                   their fully grown counterparts. Grown in coconut coir, no pesticides, harvested in 7–14 days.
-                  We didn't just discover microgreens — we discovered what happens when you
+                  We didn't just grow microgreens — we discovered what happens when you
                   put them in a child's hands.
                 </p>
               </Reveal>
@@ -208,8 +208,8 @@ export default function HomePage() {
           <div className="hiw-steps">
             {[
               { icon: <Icon.Mail />, title: 'You Reach Out', desc: 'Tell us your audience size, venue, and preferred date. We handle everything else — materials, facilitation, kits, and follow-up.' },
-              { icon: <Icon.Sprout />, title: 'We Run the Session', desc: 'Our expert facilitator runs a live nutrition + growing session. Participants sow their own trays and watch science happen in real time.' },
-              { icon: <Icon.Target />, title: 'They Take It Home', desc: 'Every participant leaves with a grow kit, a certificate, and the experience of having grown food themselves — a habit that starts day one.' },
+              { icon: <Icon.Sprout />, title: 'We Run the Session', desc: 'Our expert facilitators run a live nutrition + growing session. Participants sow their own trays and watch science happen in real time.' },
+              { icon: <Icon.Target />, title: 'They Take It Home', desc: 'Every participant leaves with a grow kit, a certificate (for schools & colleges), and the experience of having grown food themselves — a habit that starts on day one.' },
             ].map((step, i) => (
               <Reveal key={i} delay={0.08 + i * 0.08}>
                 <div className="hiw-step">
@@ -234,14 +234,14 @@ export default function HomePage() {
               <div className="tspot-left">
                 <div className="tspot-badge">★★★★★ 5.0 Rating</div>
                 <div className="tspot-quote">
-                  "We've already started our first project with mustard seeds. Looking forward
+                  "We've already started our first project with mustard seed. Looking forward
                   to see them <em>grow!</em>"
                 </div>
                 <div className="tspot-person">
-                  <div className="tspot-avatar" style={{ background: '#2d6a2d' }}>SM</div>
+                  <div className="tspot-avatar" style={{ background: '#2d6a2d' }}>R</div>
                   <div>
-                    <div className="tspot-name">Sunitha M.</div>
-                    <div className="tspot-role">Parent — Community Workshop Participant</div>
+                    <div className="tspot-name">Mrs. Raghavi</div>
+                    <div className="tspot-role">Parent — Community Workshop</div>
                   </div>
                 </div>
                 <button className="btn btn-outline" style={{ marginTop: 24, alignSelf: 'flex-start' }} onClick={() => navigate('/gallery')}>
@@ -251,9 +251,9 @@ export default function HomePage() {
             </Reveal>
             <div className="tspot-cards">
               {[
-                { initials: 'SR', color: '#1a7560', text: '"I actively participated in sowing the seeds and daily observation. I enjoyed the activity and would love to do similar hands-on activities again!"', name: 'Student — Class 6, Prasan Vidya Mandir' },
-                { initials: 'PK', color: '#b8860b', text: '"The research-backed content combined with hands-on growing practice gave our nutrition students a completely new perspective on functional foods."', name: 'Prof. Priya K. — Head of Nutrition Dept' },
-                { initials: 'AR', color: '#4a3db8', text: '"Employees found it relaxing, educational, and genuinely inspiring. We\'ve already ordered grow kits for the office."', name: 'Arjun R. — Corporate HR Manager' },
+                { initials: 'P', color: '#1a7560', text: '"Nice session, clear cut explanation with live demo helps to understand about Microgreens for the beginners...informative and interesting session, helps to lead our life healthy. Thank you Hema."', name: 'Mrs. Praba — Housewife' },
+                { initials: 'D', color: '#b8860b', text: '"I liked the seminar the most because it clearly explained the benefits of microgreens and how to grow them easily at home."', name: 'Deepa D — Working Professional' },
+                { initials: 'SR', color: '#4a3db8', text: '"I actively participated in sowing the seeds and daily observation. I enjoyed the activity and would love to do similar hands-on activities again!"', name: 'Student — Class 6, Prasan Vidya Mandir' },
               ].map((t, i) => (
                 <Reveal key={i} delay={0.1 + i * 0.08}>
                   <div className="tspot-mini">
@@ -292,7 +292,7 @@ export default function HomePage() {
           </Reveal>
           <Reveal delay={0.12}>
             <p className="sec-p" style={{ color: 'rgba(255,255,255,0.5)', textAlign: 'center', margin: '0 auto 28px' }}>
-              We'll respond within 24 hours and set up a session that works for your timeline and audience.
+              Typically we respond within 24 hours and set up a session that works for your timeline and audience.
             </p>
           </Reveal>
           <Reveal delay={0.18}>
@@ -322,7 +322,7 @@ function FAQ({ navigate }) {
     <div className="faq-wrap">
       <div className="sec">
         <Reveal><div className="sec-tag">Common Questions</div></Reveal>
-        <Reveal delay={0.06}><h2 className="sec-h">Everything You Need<br />to Know Before Booking</h2></Reveal>
+        <Reveal delay={0.06}><h2 className="sec-h">Everything You Need<br />to Know About the Workshop</h2></Reveal>
         <div className="faq-grid" style={{ marginTop: 28 }}>
           {faqs.map((faq, i) => (
             <div key={i} className="faq-item">
