@@ -297,7 +297,7 @@ export default function HomePage() {
           </Reveal>
           <Reveal delay={0.18}>
             <div className="home-cta-btns">
-              <button className="btn btn-dark" onClick={() => navigate('/contact')}>
+              <button className="btn btn-dark" onClick={() => navigate('/contact#contact')}>
                 Book a Workshop <Icon.Arrow />
               </button>
               <button className="btn btn-outline" onClick={() => navigate('/workshops')}>
@@ -337,7 +337,7 @@ function FAQ({ navigate }) {
         <Reveal delay={0.2}>
           <div style={{ textAlign: 'center', marginTop: 32 }}>
             <p style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.4)', marginBottom: 16 }}>Still have questions?</p>
-            <button className="btn btn-outline" onClick={() => navigate('/contact')} style={{ margin: '0 auto' }}>
+            <button className="btn btn-outline" onClick={() => navigate('/contact#contact')} style={{ margin: '0 auto' }}>
               Ask Us Directly <Icon.Arrow />
             </button>
           </div>

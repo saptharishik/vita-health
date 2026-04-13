@@ -229,9 +229,9 @@ export default function WorkshopsPage() {
                 <li><span className="bullet"><Icon.Check /></span>Harvest nutrition in 7–14 days, fresh from your own shelf</li>
                 <li><span className="bullet"><Icon.Check /></span>Perfect for homes, school labs &amp; corporate wellness corners</li>
               </ul>
-              <a href="mailto:info@sivsankrivitahealth.com?subject=Young Growers Microgreen Kit Enquiry" className="btn btn-primary kit-cta-btn">
+              <button className="btn btn-primary kit-cta-btn" onClick={() => navigate('/contact#contact')}>
                 Enquire About the Kit <Icon.Arrow />
-              </a>
+              </button>
             </div>
           </div>
         </Reveal>

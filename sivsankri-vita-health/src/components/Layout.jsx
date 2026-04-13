@@ -20,7 +20,17 @@ export default function Layout({ children }) {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  useEffect(() => { setMobOpen(false); window.scrollTo(0, 0) }, [location.pathname])
+  useEffect(() => {
+    setMobOpen(false)
+    if (!location.hash) {
+      window.scrollTo(0, 0)
+    } else {
+      setTimeout(() => {
+        const el = document.getElementById(location.hash.slice(1))
+        if (el) el.scrollIntoView({ behavior: 'smooth' })
+      }, 100)
+    }
+  }, [location.pathname, location.hash])
 
   const navSolid = scrollY > 60
 
@@ -48,7 +58,7 @@ export default function Layout({ children }) {
                 {label}
               </Link>
             ))}
-            <Link to="/contact" className="cta">Get in Touch</Link>
+            <Link to="/contact#contact" className="cta">Get in Touch</Link>
           </div>
           <button className="mob-btn" onClick={() => setMobOpen(true)}><Icon.Menu /></button>
         </div>
@@ -61,7 +71,7 @@ export default function Layout({ children }) {
           {navItems.map(({ path, label }) => (
             <Link key={path} to={path} onClick={() => setMobOpen(false)}>{label}</Link>
           ))}
-          <Link to="/contact" onClick={() => setMobOpen(false)} className="mob-cta">Get in Touch</Link>
+          <Link to="/contact#contact" onClick={() => setMobOpen(false)} className="mob-cta">Get in Touch</Link>
         </div>
       )}
 

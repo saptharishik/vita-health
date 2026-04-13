@@ -139,7 +139,7 @@ export default function GalleryPage() {
           </Reveal>
           <Reveal delay={0.14}>
             <div className="home-cta-btns">
-              <button className="btn btn-dark" onClick={() => navigate('/contact')}>
+              <button className="btn btn-dark" onClick={() => navigate('/contact#contact')}>
                 Book a Workshop <Icon.Arrow />
               </button>
               <button className="btn btn-outline" onClick={() => navigate('/workshops')}>

@@ -241,7 +241,7 @@ export default function AboutPage() {
         </Reveal>
         <Reveal delay={0.12}>
           <div style={{ marginTop: 28 }}>
-            <button className="btn btn-dark" onClick={() => navigate('/contact')}>
+            <button className="btn btn-dark" onClick={() => navigate('/contact#contact')}>
               Start a Collaboration <Icon.Arrow />
             </button>
           </div>
