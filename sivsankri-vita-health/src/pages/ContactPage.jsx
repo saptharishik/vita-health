@@ -1,9 +1,7 @@
 import { useState } from 'react'
 import { Reveal, Icon } from '../components/Shared'
 
-const EMAILJS_SERVICE_ID  = 'service_grstkqk'
-const EMAILJS_TEMPLATE_ID = 'template_l2y7jd4'
-const EMAILJS_PUBLIC_KEY  = '8EDQ1Q9jyinYz4MHa'
+const WEB3FORMS_KEY = '90562542-6fce-4d91-81dd-f030c89fb31a'
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: '', email: '', organization: '', message: '' })
@@ -15,27 +13,25 @@ export default function ContactPage() {
     e.preventDefault()
     setFormStatus('sending')
     try {
-      const res = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
-          service_id:  EMAILJS_SERVICE_ID,
-          template_id: EMAILJS_TEMPLATE_ID,
-          user_id:     EMAILJS_PUBLIC_KEY,
-          template_params: {
-            from_name:    form.name,
-            from_email:   form.email,
-            organization: form.organization,
-            message:      form.message,
-          },
+          access_key: WEB3FORMS_KEY,
+          subject: `Website Inquiry from ${form.name}`,
+          name: form.name,
+          email: form.email,
+          organization: form.organization || 'Not provided',
+          message: form.message,
         }),
       })
-      if (!res.ok) throw new Error(await res.text())
+      const data = await res.json()
+      if (!data.success) throw new Error(data.message)
       setFormStatus('success')
       setForm({ name: '', email: '', organization: '', message: '' })
       setTimeout(() => setFormStatus('idle'), 5000)
     } catch (err) {
-      console.error('EmailJS error:', err)
+      console.error('Web3Forms error:', err)
       setFormStatus('error')
       setTimeout(() => setFormStatus('idle'), 4000)
     }
